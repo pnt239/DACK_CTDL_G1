@@ -15,42 +15,42 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\main.cpp">
+    <ClCompile Include="test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Ctour.cpp">
+    <ClCompile Include="..\..\src\Ctour.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\CTransport.cpp">
+    <ClCompile Include="..\..\src\CTransport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\Date.cpp">
+    <ClCompile Include="..\..\src\Date.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\TransportManager.cpp">
+    <ClCompile Include="..\..\src\TransportManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\Clist.h">
+    <ClInclude Include="..\..\src\Clist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Ctour.h">
+    <ClInclude Include="..\..\src\Ctour.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\CTransport.h">
+    <ClInclude Include="..\..\src\CTransport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Date.h">
+    <ClInclude Include="..\..\src\Date.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\Library.h">
+    <ClInclude Include="..\..\src\Library.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\LinkList.h">
+    <ClInclude Include="..\..\src\LinkList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\TransportManager.h">
+    <ClInclude Include="..\..\src\TransportManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
