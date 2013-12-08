@@ -6,6 +6,7 @@
 
 void main()
 {
+	// only for test
 	Ctour a;
 	UINT id;
 	cout << "\nNhap vao ma tour: ";
