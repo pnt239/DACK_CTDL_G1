@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0DBB22C3-8779-460B-87C0-604507C216DC}</ProjectGuid>
+    <ProjectGuid>{18AD38B5-ABAE-4081-9E40-9E48162D95DA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Thuong</RootNamespace>
   </PropertyGroup>
