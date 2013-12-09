@@ -15,6 +15,9 @@ public:
 	int getD();
 	int GetM();
 	int GetY();
+	void setD(int d);
+	void setM(int m);
+	void setY(int y);
 };
 
 bool CheckYear(int year);

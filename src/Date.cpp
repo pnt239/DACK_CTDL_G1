@@ -58,6 +58,19 @@ int Date::GetY()
 	return this->m_year;
 }
 
+void Date::setD(int d)
+{
+	this->m_day = d;
+}
+void Date::setM(int m)
+{
+	this->m_month = m;
+}
+void Date::setY(int y)
+{
+	this->m_year = y;
+}
+
 bool CheckYear(int year)
 {
 	if(year % 400 == 0) //Nếu năm đó chia hết cho 400 thì là năm nhuận

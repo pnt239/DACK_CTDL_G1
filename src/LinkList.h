@@ -94,6 +94,8 @@ public:
 		int count = 1;
 		if(this->Empty())
 			return 0;
+		if(p->pNext == NULL)
+			return count;
 		do
 		{
 			p = p->pNext;
