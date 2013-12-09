@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DoAn", "DoAn.vcxproj", "{26
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BeUt", "BeUt\BeUt.vcxproj", "{DB06F78D-3E44-425C-817B-5442BCAA9DD0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Thuong", "Thuong\Thuong.vcxproj", "{BC284D99-FA20-4DBA-B88A-F5575A30FFC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{DB06F78D-3E44-425C-817B-5442BCAA9DD0}.Debug|Win32.Build.0 = Debug|Win32
 		{DB06F78D-3E44-425C-817B-5442BCAA9DD0}.Release|Win32.ActiveCfg = Release|Win32
 		{DB06F78D-3E44-425C-817B-5442BCAA9DD0}.Release|Win32.Build.0 = Release|Win32
+		{BC284D99-FA20-4DBA-B88A-F5575A30FFC2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BC284D99-FA20-4DBA-B88A-F5575A30FFC2}.Debug|Win32.Build.0 = Debug|Win32
+		{BC284D99-FA20-4DBA-B88A-F5575A30FFC2}.Release|Win32.ActiveCfg = Release|Win32
+		{BC284D99-FA20-4DBA-B88A-F5575A30FFC2}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
