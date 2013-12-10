@@ -82,6 +82,7 @@
     <ClInclude Include="..\src\Library.h" />
     <ClInclude Include="..\src\LinkList.h" />
     <ClInclude Include="..\src\TransportManager.h" />
+    <ClInclude Include="..\src\ustring.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Ctour.cpp" />
@@ -89,6 +90,7 @@
     <ClCompile Include="..\src\Date.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\TransportManager.cpp" />
+    <ClCompile Include="..\src\ustring.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
