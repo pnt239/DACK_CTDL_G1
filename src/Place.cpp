@@ -135,12 +135,3 @@ void Place::List()
 		<<"11. Da Nang."<<endl
 		<<"12. Ha Long."<<endl<<endl;
 }
-
-void main()
-{
-	Place p;
-	string fileName = "diaDiem.txt";
-	p.ReadFile(fileName);
-	cout<<"chi phi la: "<<p.Cost()<<endl;
-	system("pause");
-}
