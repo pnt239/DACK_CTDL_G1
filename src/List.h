@@ -2,8 +2,8 @@
 #include "LinkedList.h"
 
 template <class T>
-class CList  : 
-	public LinkedList<T>
+class CList :
+	public CLinkedList<T>
 {
 public:
 	CList(void)
@@ -12,14 +12,13 @@ public:
 	~CList(void)
 	{
 	}
-
 	/* Add to tail */
-	void push_back(T val)
+	void push(T val)
 	{
 		add(val);
 	}
-	/* Free from tail */
-	void pop_back()
+	/* Remove from tail */
+	void pop()
 	{
 		remove(m_size-1);
 	}
