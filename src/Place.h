@@ -1,20 +1,11 @@
-#include<iostream>
-#include<fstream>
-#include<string>
-using namespace std;
-#define MAX 100
-#define VOCUC 32760
+#pragma once
+#include <windows.h>
+#include <string>
 
-
-class Place
+// A point of graph
+class CPlace
 {
 private:
-	int n;
-	int L[MAX][MAX];
+	std::string m_name;
 public:
-	void ReadFile(string fileName);
-	void Creat(int T[], int label[],int length[], int A);
-	void PathFind(int T[], int label[],int length[], int A, int C);
-	int Cost();
-	void List();
 };

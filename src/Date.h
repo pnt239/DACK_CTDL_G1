@@ -4,7 +4,7 @@
 const int SizeMonth[] = {31,28,31,30,31,30,31,31,30,31,30,31}; //Kích thước của 12 tháng trong năm thường
 const int _SizeMonth[] = {31,29,31,30,31,30,31,31,30,31,30,31}; //Kích thước của 12 tháng trong năm nhuận
 
-class Date //lớp ngày dùng cho ngày nộp tiền vào ngân hàng
+class CDate
 {
 	int m_day;
 	int m_month;
