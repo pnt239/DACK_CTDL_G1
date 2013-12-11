@@ -1,5 +1,5 @@
 #pragma once
-#include "Ctour.h"
+#include "Tour.h"
 
 void Ctour::Set_ID(UINT id)
 {
@@ -9,11 +9,11 @@ void Ctour::Set_Place(string place)
 {
 	this->m_Place = place;
 }
-void Ctour::Set_Trans(Clist<UINT> trans)
+void Ctour::Set_Trans(CList<UINT> trans)
 {
 	this->m_Trans = trans;
 }
-void Ctour::Set_Customers(Clist<UINT> customers)
+void Ctour::Set_Customers(CList<UINT> customers)
 {
 	this->m_Customers = customers;
 }
@@ -34,12 +34,12 @@ string Ctour::Get_Place()
 {
 	return this->m_Place;
 }
-Clist<UINT> Ctour::Get_Trans()
+CList<UINT> Ctour::Get_Trans()
 {
 	return this->m_Trans;
 }
 
-Clist<UINT> Ctour::Get_Customers()
+CList<UINT> Ctour::Get_Customers()
 {
 	return this->m_Customers;
 }
@@ -54,7 +54,7 @@ Date Ctour::Get_TimeEnd()
 	return this->m_Time_End;
 }
 
-void Ctour::ShowClist(Clist<UINT> a)
+void Ctour::ShowCList(CList<UINT> a)
 {
 	a.Show();
 }

@@ -1,11 +1,11 @@
 ﻿#pragma once
 #include "Library.h"
-#include "Clist.h"
+#include "List.h"
 #include "Date.h"
 
 //class Place{};
 
-class Ctour
+class CTour
 {
 private:
 	UINT m_ID;
@@ -19,16 +19,16 @@ private:
 public:
 	void Set_ID(UINT id);
 	void Set_Place(string place);
-	void Set_Trans(Clist<UINT> trans);
-	void Set_Customers(Clist<UINT> customers);
+	void Set_Trans(CList<UINT> trans);
+	void Set_Customers(CList<UINT> customers);
 	void Set_TimeStart(Date time);
 	void Set_TimeEnd(Date time);
 
 	UINT Get_ID();
 	string Get_Place();
-	Clist<UINT> Get_Trans();
-	Clist<UINT> Get_Customers();
+	CList<UINT> Get_Trans();
+	CList<UINT> Get_Customers();
 	Date Get_TimeStart();
 	Date Get_TimeEnd();
-	void ShowClist(Clist<UINT> a);
+	void ShowClist(CList<UINT> a);
 };

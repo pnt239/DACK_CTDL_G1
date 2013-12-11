@@ -1,83 +1,26 @@
 ﻿#pragma once
-#include "LinkList.h"
-
-#define Success 1
-#define Underflow 2
-#define Overflow 3
+#include "LinkedList.h"
 
 template <class T>
-class Clist  : public LinkList<T>
+class CList  : 
+	public LinkedList<T>
 {
-private:
-	LinkList<T> data;
 public:
-	bool IsEmpty()	//kiem tra ngan xep rong
+	CList(void)
 	{
-		if(this->data.Empty())
-			return true;
-		return false;
+	}
+	~CList(void)
+	{
 	}
 
-	T Pop()		//lay khoi ngan xep 1 phan tu
+	/* Add to tail */
+	void push_back(T val)
 	{
-		T item ;
-		if(!this->IsEmpty())
-		{
-			item = this->data.getHead();
-			this->data.RemoveHead();
-			return item;
-		}
+		add(val);
 	}
-
-	//-------->>>>> hàm này chỉ cần vậy là được rồi..thêm vào đầu thì cần j kiểm tra nó rỗng chứ
-	void Push(const T item) //dua vao ngan xep 1 phan tu
+	/* Free from tail */
+	void pop_back()
 	{
-		//if(!this->IsEmpty())
-		//{
-		this->data.AddHead(item);
-			//return Success;
-		//}
-		//else
-			//return Overflow;
-	}
-
-	//lay kich thuoc stack
-	int Size()
-	{
-		if(this->IsEmpty())
-			return 0;
-		else
-		{
-			return this->data.Size();
-		}
-	}
-
-	//hien thi danh sach
-	void Show()
-	{
-		if(!this->IsEmpty())
-			this->data.PrintList();
-	}
-		
-	int Top(T &item)		//xem phan tu dinh cua ngan xep
-	{
-		if(!this->IsEmpty())
-		{
-			item = this->data.getHead();
-			return Success;
-		}
-		else
-			return Underflow;
-	}
-
-	void ClearAll()				//xoa tat ca cac phan tu
-	{
-		this->data.RemoveList();
-	}
-
-	//sap xep
-	void Sort()
-	{
-		QuickSort(this->data, 0, this->data.Size()-1);
+		remove(m_size-1);
 	}
 };

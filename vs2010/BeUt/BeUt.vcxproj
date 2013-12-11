@@ -76,20 +76,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\src\Ctour.cpp" />
-    <ClCompile Include="..\..\src\CTransport.cpp" />
+    <ClCompile Include="..\..\src\Tour.cpp" />
+    <ClCompile Include="..\..\src\Transport.cpp" />
     <ClCompile Include="..\..\src\Date.cpp" />
     <ClCompile Include="..\..\src\Place.cpp" />
     <ClCompile Include="..\..\src\TransportManager.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\Clist.h" />
-    <ClInclude Include="..\..\src\Ctour.h" />
-    <ClInclude Include="..\..\src\CTransport.h" />
+    <ClInclude Include="..\..\src\List.h" />
+    <ClInclude Include="..\..\src\Tour.h" />
+    <ClInclude Include="..\..\src\Transport.h" />
     <ClInclude Include="..\..\src\Date.h" />
     <ClInclude Include="..\..\src\Library.h" />
-    <ClInclude Include="..\..\src\LinkList.h" />
+    <ClInclude Include="..\..\src\LinkedList.h" />
     <ClInclude Include="..\..\src\Place.h" />
     <ClInclude Include="..\..\src\TransportManager.h" />
   </ItemGroup>

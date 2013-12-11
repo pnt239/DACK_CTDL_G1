@@ -1,13 +1,13 @@
 ﻿#pragma once
-#include "Ctour.h"
+#include "Tour.h"
 #include "Date.h"
-#include "Clist.h"
+#include "List.h"
 #include "TransportManager.h"
 
 void main()
 {
 	// only for test
-	Ctour a;
+	/*Ctour a;
 	UINT id = 1;
 	a.Set_ID(id);
 	string place;
@@ -76,6 +76,8 @@ void main()
 		r = h.Pop();
 		r.ExportAll();
 		cout << endl;
-	}
+	}*/
+
+
 }
 
