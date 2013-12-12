@@ -5,7 +5,7 @@ using namespace std;
 
 const int SizeMonth[] = {31,28,31,30,31,30,31,31,30,31,30,31}; //Kích thước của 12 tháng trong năm thường
 const int _SizeMonth[] = {31,29,31,30,31,30,31,31,30,31,30,31}; //Kích thước của 12 tháng trong năm nhuận
-const ustring days[] =  {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+const ustring days[] =  {L"Sunday", L"Monday", L"Tuesday", L"Wednesday", L"Thursday", L"Friday", L"Saturday"};
 
 CDate::CDate()
 {
@@ -77,7 +77,7 @@ void CDate::setYear(INT y)
 	this->m_year = y;
 }
 
-bool CheckYear(INT year)
+BOOL CDate::CheckYear(INT year)
 {
 	if(year % 400 == 0) //Nếu năm đó chia hết cho 400 thì là năm nhuận
 		return 1;
@@ -86,9 +86,9 @@ bool CheckYear(INT year)
 	return 0; //Nếu không thỏa mãn điều kiện thì thoát hàm.
 }
 
-ustring CDate::dayOfWeek(INT d, INT m, INT y)
+ustring CDate::dayOfWeek()
 {
 	int tmp;
-	tmp=((int)(d+2*m+3*(m+1)/5+y+y/4))%7;
+	tmp=((int)(m_day+2*m_month+3*(m_month+1)/5+m_year+m_year/4))%7;
 	return days[tmp];
 }

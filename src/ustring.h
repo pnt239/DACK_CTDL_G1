@@ -11,14 +11,16 @@ class ustring
 private:
 	std::wstring str;
 public:
-	//constructor
+	//default constructor
 	ustring();
+	//para constructor
+	ustring(LPWSTR str);
 	//setter, kiểu dữ liệu input wchar_t*
 	void Set(WCHAR *u);
 	//getter, kiểu dữ liệu trả về wstring
 	std::wstring Get();
 	//lấy data, kiểu dữ liệu trả về const wchar_t*
-	const wchar_t* data();
+	LPCWSTR data();
 	//lấy độ dài
 	int length();
 	//clear
@@ -29,4 +31,10 @@ public:
 	std::string ConvertUTF16ToUTF8();
 
 	WCHAR& operator[] (INT pos);
+	ustring& operator= (LPWSTR str);
+	friend std::ostream &operator<<(std::ostream &out, ustring c) 
+	{
+        out<<c.str.data();
+        return out;
+	}
 };

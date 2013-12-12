@@ -19,5 +19,5 @@ public:
 	void setDay(INT d);
 	void setMonth(INT m);
 	void setYear(INT y);
-	ustring dayOfWeek(INT d, INT m, INT y);
+	ustring dayOfWeek();
 };

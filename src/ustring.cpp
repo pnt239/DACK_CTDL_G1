@@ -1,15 +1,21 @@
 #include "ustring.h"
 using namespace std;
 
-ustring::ustring()
-{this->str = L"";}
+ustring::ustring() : str(L"")
+{
+}
+
+ustring::ustring(LPWSTR str) : str(str)
+{
+}
+
 void ustring::Set(wchar_t *u)
 {
 	this->str = u;
 }
 wstring ustring::Get()
 {return this->str;}
-const wchar_t* ustring::data()
+LPCWSTR ustring::data()
 {return this->str.data();}
 int ustring::length()
 {return this->str.length();}
@@ -204,4 +210,10 @@ string ustring::ConvertUTF16ToUTF8()
 WCHAR& ustring::operator[] (INT pos)
 {
 	return this->str[pos];
+}
+
+ustring& ustring::operator= (LPWSTR str)
+{
+	this->str.assign(str);
+	return (*this);
 }
