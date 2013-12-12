@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2D0BA44D-460A-4641-B075-AA498E720018}</ProjectGuid>
+    <ProjectGuid>{106FE126-5195-421E-8EEC-1BF50496AF96}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>TThuan</RootNamespace>
+    <RootNamespace>Thanh</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -41,8 +41,6 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\..\$(Configuration)\vs2012\</OutDir>
-    <IncludePath>..\..\src;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
