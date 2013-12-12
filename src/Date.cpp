@@ -1,6 +1,10 @@
 ﻿#pragma once
 #include "Date.h"
 
+const int SizeMonth[] = {31,28,31,30,31,30,31,31,30,31,30,31}; //Kích thước của 12 tháng trong năm thường
+const int _SizeMonth[] = {31,29,31,30,31,30,31,31,30,31,30,31}; //Kích thước của 12 tháng trong năm nhuận
+const string days[] =  {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+
 CDate::CDate()
 {
 
@@ -78,4 +82,11 @@ bool CheckYear(int year)
 	if(year % 100 != 0 && year % 4) //nếu năm đó chia hết cho 4 nhưng không chia hết cho 100 thì là năm nhuận, vì điều kiện chia hết cho 400 đã xét
 		return 1;
 	return 0; //Nếu không thỏa mãn điều kiện thì thoát hàm.
+}
+
+string CDate::dayOfWeek(int d, int m, int y)
+{
+	int tmp;
+	tmp=((int)(d+2*m+3*(m+1)/5+y+y/4))%7;
+	return days[tmp];
 }
