@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include <iostream>
-#include <string>
+#include <ustring.h>
 #include <vector>
 #include <Windows.h>
 class COfficer

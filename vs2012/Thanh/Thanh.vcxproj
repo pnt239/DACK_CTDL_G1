@@ -81,6 +81,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Date.cpp" />
+    <ClCompile Include="..\..\src\Officer.cpp" />
     <ClCompile Include="..\..\src\ustring.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -89,6 +90,7 @@
     <ClInclude Include="..\..\src\Library.h" />
     <ClInclude Include="..\..\src\LinkedList.h" />
     <ClInclude Include="..\..\src\List.h" />
+    <ClInclude Include="..\..\src\Officer.h" />
     <ClInclude Include="..\..\src\ustring.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
