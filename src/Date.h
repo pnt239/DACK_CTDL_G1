@@ -1,5 +1,4 @@
 ﻿#pragma once
-// khong include Library vao
 #include <windows.h>
 #include <ustring.h>
 
