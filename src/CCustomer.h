@@ -16,10 +16,8 @@ protected:
 	string TransportCode; // mã số phương tiện
 public:
 	CCustomer();
-
-	void Nhap();
-	void Xuat();
-
+	 
+	// các hàm getter và setter
 	int getID();
 	void setID(int ID);
 
@@ -38,6 +36,7 @@ public:
 	string getTransportCode();
 	void setTransportCode(string Transport);
 
+	// hàm assign các thuộc tính
 	void AssignName(CCustomer);
 	void AssignPhone(CCustomer);
 	void AssignPassport(CCustomer);
@@ -55,8 +54,6 @@ private:
 public:
 	CListCustomer();
 	~CListCustomer();
-	void Input();
-	void Output();
 	void Swap(CCustomer&, CCustomer&);
-	void SortList();
+	void SortList(); // hàm sắp xếp danh sách khách hàng theo ID
 };

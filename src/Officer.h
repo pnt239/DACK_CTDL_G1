@@ -16,9 +16,7 @@ protected:
 public:
 	COfficer();
 
-	void Nhap();
-	void Xuat();
-
+	//hàm getter và setter các thuộc tính
 	int getID();
 	void setID(int ID);
 
@@ -37,7 +35,8 @@ public:
 	string getTransportCode();
 	void setTransportCode(string Transport);
 
-	void Assign(COfficer); //assign tat ca
+	// hàm assign 
+	void Assign(COfficer); 
 	void AssignName(COfficer);
 	void AssignPhone(COfficer);
 	void AssignPassport(COfficer);
@@ -54,9 +53,7 @@ private:
 public:
 	CListOfficer();
 	~CListOfficer();
-	void Input();
-	void Output();
-	void SortList();
-	void Swap(COfficer&, COfficer&);
+	void SortList();// sắp xếp danh sách nhân viên theo ID
+	void Swap(COfficer&, COfficer&); // hàm hoán vị
 };
 

@@ -5,21 +5,18 @@ using namespace std;
 
 int main()
 {
-	CListOfficer L;
-	L.Input();
-	L.SortList();
-	L.Output();
+	CCustomer C1, C2;
+	C1.setID(1089);
+	C1.setName("Nguyen Van Nam");
+	C1.setPassport("Z13490B");
+	C1.setPhone("0909112233");
+	C1.setTourCode("Bus13122013");
+	C1.setTransportCode("53");
 	
-	/*CCustomer C1, C2;
-	C1.Nhap();
-	cout << "\nTest: " << endl;
-	C1.Xuat();
 	C2.AssignName(C1);
 	C2.AssignPassport(C1);
 	C2.AssignPhone(C1);
 	C2.AssignTourCode(C1);
 	C2.AssignTransportCode(C1);
-	cout << "\ntTest Assign" << endl;
-	C2.Xuat();*/
 	return 0;
 }

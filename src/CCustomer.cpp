@@ -99,33 +99,6 @@ void CCustomer::AssignTransportCode(CCustomer COff)
 	this->TransportCode = COff.TransportCode;
 }
 
-void CCustomer::Nhap()
-{
-	cout << "Nhap ID: ";
-	cin >> ID;
-	fflush(stdin);
-	cout << "Nhap ho va ten: ";
-	getline(cin, this->Name);
-	cout << "Nhap so dien thoai: ";
-	getline(cin, this->Phone);
-	cout << "Nhap ho chieu: ";
-	getline(cin,this->Passport);
-	cout << "Nhap ma Tour: ";
-	getline(cin, this->TourCode);
-	cout << "Nhap ma phuong tien: ";
-	getline(cin,this->TransportCode);
-}
-
-void CCustomer::Xuat()
-{
-	cout << endl;
-	cout << "ID: " << this->ID << endl;
-	cout << "Ho va ten: " << this->Name << endl;
-	cout << "So dien thoai: " << this->Phone << endl;
-	cout << "Ho chieu: " << this->Passport << endl;
-	cout << "Ma tour: " << this->TourCode << endl;
-	cout << "Ma phuong tien: " << this->TransportCode << endl;
-}
 
 //////////////////////////////////////////////////////////////////////////////////////
 
@@ -143,38 +116,15 @@ CListCustomer::~CListCustomer()
 	}
 }
 
-void CListCustomer::Input()
-{
-	CCustomer temp;
-	cout << "Nhap so luong khach hang: ";
-	cin >> this->SL;
-	
-	for(int i = 0 ; i < SL; i++)
-	{
-		cout << "\nNhap thong tin khach hang thu " << i+1 << ":\n";
-		temp.Nhap();
-		this->Cus.push_back(temp);
-	}
-}
 
-void CListCustomer::Output()
-{
-	CCustomer temp;
-	for(int i = 0; i < this->SL; i++)
-	{
-		cout << "\nThong tin khach hang thu " << i+1 <<endl;
-		this->Cus[i].Xuat();
-	}
-}
-
-void CListCustomer::Swap(CCustomer& a, CCustomer& b)
+void CListCustomer::Swap(CCustomer& a, CCustomer& b) // hoán vị thông tin hai khách hàng
 {
 	CCustomer temp;
 	temp = a;
 	a = b; 
 	b= temp;
 }
-void CListCustomer::SortList()
+void CListCustomer::SortList() // sắp xếp danh sách khách hàng tăng dần theo ID
 {
 	int min;
 	for(int i = 0; i < this->SL-1; i++)
