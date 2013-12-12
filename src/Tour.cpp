@@ -1,10 +1,9 @@
 #include "Tour.h"
 using namespace std;
 
-CTour::CTour()
-{
-
-}
+//CTour::CTour()
+//{
+//}
 CTour::~CTour()
 {
 
@@ -14,9 +13,9 @@ void CTour::setID(UINT id)
 {
 	this->m_id = id;
 }
-void CTour::setPlace(CPlace& place)
+void CTour::setPlace(string place)
 {
-	this->m_place = place;
+	this->m_place.setName(place);
 }
 void CTour::setTimeStart(CDate time)
 {

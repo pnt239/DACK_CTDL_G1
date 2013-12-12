@@ -3,8 +3,9 @@
 #include <string>
 #include "List.h"
 #include "Date.h"
+#include "Place.h"
 
-class CPlace{};
+//class CPlace{};
 
 class CTour
 {
@@ -19,7 +20,7 @@ public:
 	~CTour();
 
 	void setID(UINT id);
-	void setPlace(CPlace& place);
+	void setPlace(string place);
 	void setTimeStart(CDate time);
 	void setTimeEnd(CDate time);
 
