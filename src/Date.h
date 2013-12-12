@@ -10,8 +10,9 @@ class CDate
 	int m_month;
 	int m_year;
 public:
-	void Import();
-	void Export();
+	CDate();
+	~CDate();
+	void Import(string a);
 	int getD();
 	int GetM();
 	int GetY();

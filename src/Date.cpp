@@ -1,18 +1,23 @@
 ﻿#pragma once
 #include "Date.h"
 
-void Date::Import()
+CDate::CDate()
+{
+
+}
+
+CDate::~CDate()
+{
+
+}
+
+void CDate::Import(string a)
 {
 	do
 	{
 		int dem = 0;
-		string a;
 		int dk = 0;
 		int j = 0;
-		cout << "Nhap vao chuoi co dang (dd/mm/yyyy): ";
-		fflush(stdin);
-		getline(cin, a); //Nhập chuỗi thời gian vào chuỗi a
-		fflush(stdin);
 		char** temp = new char*[3]; //Tạo con trỏ hai chiều kiểu char
 		for(int i = 0; i < 3; i++) //Vòng lặp khởi tạo vùng nhớ cho biến
 			temp[i] = new char[a.length()];
@@ -38,35 +43,30 @@ void Date::Import()
 	}while(this->m_year < 0 || this->m_month < 0 || this->m_month > 12 || (CheckYear(this->m_year) == 0 && this->m_day > SizeMonth[this->m_month - 1] || this->m_day < 0) || (CheckYear(this->m_year) == 1 && this->m_day > _SizeMonth[this->m_month - 1] || this->m_day < 0)); //Điều kiện dùng của vòng lặp nhập thời gian
 }
 
-void Date::Export()
-{
-	cout << this->m_day << '/' << this->m_month << '/' << this->m_year; //Xuất ngày tháng năm ra màn hình
-}
-
-int Date::GetM()
+int CDate::GetM()
 {
 	return this->m_month;
 }
 
-int Date::getD()
+int CDate::getD()
 {
 	return this->m_day;
 }
 
-int Date::GetY()
+int CDate::GetY()
 {
 	return this->m_year;
 }
 
-void Date::setD(int d)
+void CDate::setD(int d)
 {
 	this->m_day = d;
 }
-void Date::setM(int m)
+void CDate::setM(int m)
 {
 	this->m_month = m;
 }
-void Date::setY(int y)
+void CDate::setY(int y)
 {
 	this->m_year = y;
 }

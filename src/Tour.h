@@ -15,13 +15,16 @@ private:
 	CDate m_timeEnd;
 	std::string m_name; // ten tour
 public:
+	CTour();
+	~CTour();
+
 	void setID(UINT id);
-	void setPlace(string place);
-	void setTimeStart(Date time);
-	void setTimeEnd(Date time);
+	void setPlace(CPlace& place);
+	void setTimeStart(CDate time);
+	void setTimeEnd(CDate time);
 
 	UINT getID();
 	CPlace &getPlace(); // co tham chieu!
-	Date getTimeStart();
-	Date getimeEnd();
+	CDate getTimeStart();
+	CDate getimeEnd();
 };
