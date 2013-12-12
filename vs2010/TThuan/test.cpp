@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Officer.h"
+#include "CCustomer.h"
 using namespace std;
 
 int main()

@@ -1,7 +1,9 @@
 ﻿#include "Officer.h"
+#include "CCustomer.h"
 #include <iostream>
 #include <vector>
 #include<string>
+using namespace std;
 
 // Viết các hàm trong lớp nhân viên
 COfficer::COfficer()
@@ -73,6 +75,14 @@ void COfficer::setTransportCode(string TransportCode)
 	this->TransportCode = TransportCode;
 }
 
+void  COfficer::Assign(COfficer COff)
+{
+	this->AssignName(COff);
+	this->AssignPhone(COff);
+	this->AssignPassport(COff);
+	this->AssignTourCode(COff);
+	this->AssignTransportCode(COff);
+}
 void COfficer::AssignName(COfficer COff)
 {
 	this->Name = COff.Name;
@@ -112,7 +122,7 @@ void COfficer::Nhap()
 	getline(cin, this->Phone);
 	cout << "Nhap ho chieu: ";
 	fflush(stdin);
-	getline(cin,this->pPassport);
+	getline(cin,this->Passport);
 	cout << "Nhap ma Tour: ";
 	fflush(stdin);
 	getline(cin, this->TourCode);
@@ -142,15 +152,15 @@ CListOfficer::CListOfficer()
 
 CListOfficer::~CListOfficer()
 {
-	if(!this->Cus.empty())
+	if(!this->Offi.empty())
 	{
-		this->Cus.~vector();
+		this->Offi.~vector();
 	}
 }
 
 void CListOfficer::Input()
 {
-	CCustomer temp;
+	COfficer temp;
 	cout << "Nhap so luong khach hang: ";
 	cin >> this->SL;
 	
@@ -158,7 +168,7 @@ void CListOfficer::Input()
 	{
 		cout << "\nNhap thong tin khach hang thu " << i+1 << ":\n";
 		temp.Nhap();
-		this->Cus.push_back(temp);
+		this->Offi.push_back(temp);
 	}
 }
 
@@ -168,26 +178,24 @@ void CListOfficer::Output()
 	for(int i = 0; i < this->SL; i++)
 	{
 		cout << "\nThong tin khach hang thu " << i+1 <<endl;
-		this->Cus.front().Xuat();
+		this->Offi[i].Xuat();
 	}
 }
 
-void CListOfficer::Swap(CCustomer& a, CCustomer& b)
+void CListOfficer::Swap(COfficer& a, COfficer& b)
 {
-	CCustomer temp;
-	temp = a;
-	a = b; 
-	b = temp;
+	COfficer temp;
+	temp.Assign(a);
+	a.Assign(b);
+	b.Assign(temp);
 }
 void CListOfficer::SortList()
 {
 	int min;
 	for(int i = 0; i < this->SL-1; i++)
 	{
-		min = i;
 		for(int j = i + 1; j < this->SL; j++)
-			if(this->Cus[j].getID() < this->Cus[min].getID())
-				min = j;
-		this->Swap(this->Cus[min], this->Cus[i]);
+			if(this->Offi[j].getID() < this->Offi[i].getID())
+				this->Swap(this->Offi[i], this->Offi[j]);
 	}
 }

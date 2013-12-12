@@ -163,8 +163,25 @@ void CListCustomer::Output()
 	for(int i = 0; i < this->SL; i++)
 	{
 		cout << "\nThong tin khach hang thu " << i+1 <<endl;
-		this->Cus.front().Xuat();
+		this->Cus[i].Xuat();
 	}
 }
 
+void CListCustomer::Swap(CCustomer& a, CCustomer& b)
+{
+	CCustomer temp;
+	temp = a;
+	a = b; 
+	b= temp;
+}
+void CListCustomer::SortList()
+{
+	int min;
+	for(int i = 0; i < this->SL-1; i++)
+	{
+		for(int j = i + 1; j < this->SL; j++)
+			if(this->Cus[j].getID() < this->Cus[i].getID())
+				this->Swap(this->Cus[i], this->Cus[j]);
+	}
+}
 

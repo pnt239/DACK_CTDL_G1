@@ -57,5 +57,6 @@ public:
 	~CListCustomer();
 	void Input();
 	void Output();
+	void Swap(CCustomer&, CCustomer&);
 	void SortList();
 };

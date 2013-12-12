@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+using namespace std;
 class COfficer
 {
 protected:
@@ -36,6 +37,7 @@ public:
 	string getTransportCode();
 	void setTransportCode(string Transport);
 
+	void Assign(COfficer); //assign tat ca
 	void AssignName(COfficer);
 	void AssignPhone(COfficer);
 	void AssignPassport(COfficer);
@@ -47,7 +49,7 @@ class CListOfficer: public COfficer // lớp danh sách nhân viên
 {
 private:
 	int SL; // số lượng khách hàng
-	vector<COfficer> Cus;
+	vector<COfficer> Offi;
 	
 public:
 	CListOfficer();
@@ -55,6 +57,6 @@ public:
 	void Input();
 	void Output();
 	void SortList();
-	void Swap(COfficer& , COfficer&);
+	void Swap(COfficer&, COfficer&);
 };
 

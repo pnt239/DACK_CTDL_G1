@@ -21,9 +21,15 @@
     <ClCompile Include="..\..\src\Officer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\CCustomer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Officer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\CCustomer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
