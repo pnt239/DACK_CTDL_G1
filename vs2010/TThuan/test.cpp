@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Officer.h"
 #include "CCustomer.h"
-using namespace std;
+std::string;
 
 int main()
 {
