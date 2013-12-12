@@ -18,8 +18,12 @@ public:
 	}
 	wstring Getter()
 	{return this->str;}
-
-
+	const wchar_t* data()
+	{return this->str.data();}
+	int length()
+	{return this->str.length();}
+	void clear()
+	{this->str.clear();}
 
 	//----------------------------------------------------------------------------
 	// FUNCTION: ConvertUTF8ToUTF16
