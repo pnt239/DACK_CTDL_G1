@@ -1,4 +1,6 @@
 #include "ustring.h"
+using namespace std;
+
 ustring::ustring()
 {this->str = L"";}
 void ustring::Set(wchar_t *u)
@@ -197,4 +199,9 @@ string ustring::ConvertUTF16ToUTF8()
  
 	// Return resulting UTF-8 string
 	return strUTF8.GetString();
+}
+
+WCHAR& ustring::operator[] (INT pos)
+{
+	return this->str[pos];
 }

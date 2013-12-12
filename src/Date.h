@@ -1,22 +1,23 @@
 ﻿#pragma once
-#include "Library.h"
-
+// khong include Library vao
+#include <windows.h>
+#include <ustring.h>
 
 class CDate
 {
-	int m_day;
-	int m_month;
-	int m_year;
-	bool CheckYear(int year);
+	INT m_day;
+	INT m_month;
+	INT m_year;
+	BOOL CheckYear(INT year);
 public:
 	CDate();
 	~CDate();
-	void Import(string a);
-	int getDay();
-	int GetMonth();
-	int GetYear();
-	void setDay(int d);
-	void setMonth(int m);
-	void setYear(int y);
-	string dayOfWeek(int d, int m, int y);
+	void Import(ustring a);
+	INT getDay();
+	INT GetMonth();
+	INT GetYear();
+	void setDay(INT d);
+	void setMonth(INT m);
+	void setYear(INT y);
+	ustring dayOfWeek(INT d, INT m, INT y);
 };

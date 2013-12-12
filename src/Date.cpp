@@ -1,9 +1,11 @@
 ﻿#pragma once
 #include "Date.h"
+#include "Library.h"
+using namespace std;
 
 const int SizeMonth[] = {31,28,31,30,31,30,31,31,30,31,30,31}; //Kích thước của 12 tháng trong năm thường
 const int _SizeMonth[] = {31,29,31,30,31,30,31,31,30,31,30,31}; //Kích thước của 12 tháng trong năm nhuận
-const string days[] =  {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+const ustring days[] =  {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
 CDate::CDate()
 {
@@ -15,7 +17,7 @@ CDate::~CDate()
 
 }
 
-void CDate::Import(string a)
+void CDate::Import(ustring a)
 {
 	do
 	{
@@ -44,38 +46,38 @@ void CDate::Import(string a)
 		this->m_month = atoi(temp[1]); //Tương tự
 		this->m_year = atoi(temp[2]); //Tương tự
 
-	}while(this->m_year < 0 || this->m_month < 0 || this->m_month > 12 || (CheckYear(this->m_year) == 0 && this->m_day > SizeMonth[this->m_month - 1] || this->m_day < 0) || (CheckYear(this->m_year) == 1 && this->m_day > _SizeMonth[this->m_month - 1] || this->m_day < 0)); //Điều kiện dùng của vòng lặp nhập thời gian
+	} while(this->m_year < 0 || this->m_month < 0 || this->m_month > 12 || (CheckYear(this->m_year) == 0 && this->m_day > SizeMonth[this->m_month - 1] || this->m_day < 0) || (CheckYear(this->m_year) == 1 && this->m_day > _SizeMonth[this->m_month - 1] || this->m_day < 0)); //Điều kiện dùng của vòng lặp nhập thời gian
 }
 
-int CDate::GetMonth()
+INT CDate::GetMonth()
 {
 	return this->m_month;
 }
 
-int CDate::getDay()
+INT CDate::getDay()
 {
 	return this->m_day;
 }
 
-int CDate::GetYear()
+INT CDate::GetYear()
 {
 	return this->m_year;
 }
 
-void CDate::setDay(int d)
+void CDate::setDay(INT d)
 {
 	this->m_day = d;
 }
-void CDate::setMonth(int m)
+void CDate::setMonth(INT m)
 {
 	this->m_month = m;
 }
-void CDate::setYear(int y)
+void CDate::setYear(INT y)
 {
 	this->m_year = y;
 }
 
-bool CheckYear(int year)
+bool CheckYear(INT year)
 {
 	if(year % 400 == 0) //Nếu năm đó chia hết cho 400 thì là năm nhuận
 		return 1;
@@ -84,7 +86,7 @@ bool CheckYear(int year)
 	return 0; //Nếu không thỏa mãn điều kiện thì thoát hàm.
 }
 
-string CDate::dayOfWeek(int d, int m, int y)
+ustring CDate::dayOfWeek(INT d, INT m, INT y)
 {
 	int tmp;
 	tmp=((int)(d+2*m+3*(m+1)/5+y+y/4))%7;
