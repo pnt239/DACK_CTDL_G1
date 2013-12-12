@@ -76,6 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\CCustomer.cpp" />
     <ClCompile Include="..\..\src\Tour.cpp" />
     <ClCompile Include="..\..\src\Transport.cpp" />
     <ClCompile Include="..\..\src\Date.cpp" />
@@ -84,6 +85,7 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\CCustomer.h" />
     <ClInclude Include="..\..\src\List.h" />
     <ClInclude Include="..\..\src\Tour.h" />
     <ClInclude Include="..\..\src\Transport.h" />

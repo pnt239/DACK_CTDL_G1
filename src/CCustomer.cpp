@@ -23,6 +23,16 @@ void CCustomer::setID(int ID)
 	this->m_ID = ID;
 }
 
+UINT CCustomer::getPlaceCode()
+{
+	return this->m_PlaceCode;
+}
+void CCustomer::setPlaceCode(UINT placecode)
+{
+	this->m_PlaceCode = placecode;
+}
+
+
 std::string CCustomer::getName()
 {
 	return this->m_Name;
@@ -99,6 +109,10 @@ void CCustomer::AssignTransportCode(CCustomer COff)
 	this->m_TransportCode = COff.m_TransportCode;
 }
 
+void CCustomer::AssignPlaceCode(CCustomer COff)
+{
+	this->m_PlaceCode = COff.m_PlaceCode;
+}
 
 //////////////////////////////////////////////////////////////////////////////////////
 

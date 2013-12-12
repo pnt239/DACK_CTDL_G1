@@ -1,6 +1,9 @@
 ﻿#pragma once
+#include <iostream>
 #include <string>
 #include <vector>
+#include <Windows.h>
+
 
 class CCustomer // lớp khách hàng
 {
@@ -11,6 +14,7 @@ protected:
 	std::string m_Phone; // số điện thoại
 	std::string m_Passport; // hộ chiếu
 	std::string m_TourCode; // mã tour
+	UINT m_PlaceCode;	//mã địa điểm
 	std::string m_TransportCode; // mã số phương tiện
 public:
 	CCustomer();
@@ -18,6 +22,9 @@ public:
 	// các hàm getter và setter
 	int getID();
 	void setID(int ID);
+
+	UINT getPlaceCode();
+	void setPlaceCode(UINT placecode);
 
 	std::string getName();
 	void setName(std::string Name);
@@ -40,6 +47,7 @@ public:
 	void AssignPassport(CCustomer);
 	void AssignTourCode(CCustomer);
 	void AssignTransportCode(CCustomer);
+	void AssignPlaceCode(CCustomer);
 };
 
 

@@ -1,2 +1,4 @@
 #pragma once
-#include "Tour.h"
+#include "Place.h"
+#include "CCustomer.h"
+
