@@ -59,5 +59,8 @@
     <ClInclude Include="..\..\src\Transport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

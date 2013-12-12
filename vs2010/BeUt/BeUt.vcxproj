@@ -92,6 +92,7 @@
     <ClInclude Include="..\..\src\LinkedList.h" />
     <ClInclude Include="..\..\src\Place.h" />
     <ClInclude Include="..\..\src\TransportManager.h" />
+    <ClInclude Include="CMap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
