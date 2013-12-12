@@ -17,6 +17,23 @@ std::string CPlace::getName()
 {
 	return this->m_name;
 }
+
+void CPlace::setX(INT x)
+{
+	this->m_x = x;
+}
+void CPlace::setY(INT y)
+{
+	this->m_y = y;
+}
+INT CPlace::getX()
+{
+	return this->m_x;
+}
+INT CPlace::getY()
+{
+	return this->m_y;
+}
 //
 //void Place::ReadFile(string fileName)
 //{
