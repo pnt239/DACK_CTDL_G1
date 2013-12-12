@@ -2,18 +2,18 @@
 #include <iostream>
 #include <string>
 #include <vector>
-std::string;
+
 
 class CCustomer // lớp khách hàng
 {
 protected:
-	int ID; 
-	string Name; // tên khách hàng
+	int m_ID; 
+	std::string m_Name; // tên khách hàng
 	//Day BirthDay; // ngày tháng năm sinh thuộc lớp ngày
-	string Phone; // số điện thoại
-	string Passport; // hộ chiếu
-	string TourCode; // mã tour
-	string TransportCode; // mã số phương tiện
+	std::string m_Phone; // số điện thoại
+	std::string m_Passport; // hộ chiếu
+	std::string m_TourCode; // mã tour
+	std::string m_TransportCode; // mã số phương tiện
 public:
 	CCustomer();
 	 
@@ -21,20 +21,20 @@ public:
 	int getID();
 	void setID(int ID);
 
-	string getName();
-	void setName(string Name);
+	std::string getName();
+	void setName(std::string Name);
 
-	string getPhone();
-	void setPhone(string Phone);
+	std::string getPhone();
+	void setPhone(std::string Phone);
 
-	string getPassport();
-	void setPassport(string Passport);
+	std::string getPassport();
+	void setPassport(std::string Passport);
 
-	string getTourCode();
-	void setTourCode(string TourCode);
+	std::string getTourCode();
+	void setTourCode(std::string TourCode);
 
-	string getTransportCode();
-	void setTransportCode(string Transport);
+	std::string getTransportCode();
+	void setTransportCode(std::string Transport);
 
 	// hàm assign các thuộc tính
 	void AssignName(CCustomer);
@@ -45,15 +45,15 @@ public:
 };
 
 
-class CListCustomer: public CCustomer // lớp danh sách khách hàng
-{
-private:
-	int SL; // số lượng khách hàng
-	vector<CCustomer> Cus;
-	
-public:
-	CListCustomer();
-	~CListCustomer();
-	void Swap(CCustomer&, CCustomer&);
-	void SortList(); // hàm sắp xếp danh sách khách hàng theo ID
-};
+//class CListCustomer: public CCustomer // lớp danh sách khách hàng
+//{
+//private:
+//	int SL; // số lượng khách hàng
+//	vector<CCustomer> Cus;
+//	
+//public:
+//	CListCustomer();
+//	~CListCustomer();
+//	void Swap(CCustomer&, CCustomer&);
+//	void SortList(); // hàm sắp xếp danh sách khách hàng theo ID
+//};

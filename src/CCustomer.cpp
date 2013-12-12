@@ -6,132 +6,132 @@ using namespace std;
 // Viết các hàm trong lớp khách hàng
 CCustomer::CCustomer()
 {
-	this->ID = -1;
-	this->Name = "NULL";
-	this->Passport = "NULL";
-	this->Phone = "NULL";
-	this->TourCode = "NULL";
-	this->TransportCode = "NULL";
+	this->m_ID = -1;
+	this->m_Name = "NULL";
+	this->m_Passport = "NULL";
+	this->m_Phone = "NULL";
+	this->m_TourCode = "NULL";
+	this->m_TransportCode = "NULL";
 }
 int CCustomer::getID()
 {
-	return this->ID;
+	return this->m_ID;
 }
 
 void CCustomer::setID(int ID)
 {
-	this->ID = ID;
+	this->m_ID = ID;
 }
 
-string CCustomer::getName()
+std::string CCustomer::getName()
 {
-	return this->Name;
+	return this->m_Name;
 }
 
-void CCustomer::setName(string Name)
+void CCustomer::setName(std::string Name)
 {
-	this->Name = Name;
+	this->m_Name = Name;
 }
 
-string CCustomer::getPhone()
+std::string CCustomer::getPhone()
 {
-	return this->Phone;
+	return this->m_Phone;
 }
 
-void CCustomer::setPhone(string Phone)
+void CCustomer::setPhone(std::string Phone)
 {
-	this->Phone = Phone;
+	this->m_Phone = Phone;
 }
 
-string CCustomer::getPassport()
+std::string CCustomer::getPassport()
 {
-	return this->Passport;
+	return this->m_Passport;
 }
 
-void CCustomer::setPassport(string Passport)
+void CCustomer::setPassport(std::string Passport)
 {
-	this->Passport = Passport;
+	this->m_Passport = Passport;
 }
 
-string CCustomer::getTourCode()
+std::string CCustomer::getTourCode()
 {
-	return this->TourCode;
+	return this->m_TourCode;
 }
 
-void CCustomer::setTourCode(string TourCode)
+void CCustomer::setTourCode(std::string TourCode)
 {
-	this->TourCode = TourCode;
+	this->m_TourCode = TourCode;
 }
 
-string CCustomer::getTransportCode()
+std::string CCustomer::getTransportCode()
 {
-	return this->TransportCode;
+	return this->m_TransportCode;
 }
 
-void CCustomer::setTransportCode(string TransportCode)
+void CCustomer::setTransportCode(std::string TransportCode)
 {
-	this->TransportCode = TransportCode;
+	this->m_TransportCode = TransportCode;
 }
 
 void CCustomer::AssignName(CCustomer COff)
 {
-	this->Name = COff.Name;
+	this->m_Name = COff.m_Name;
 }
 
 void CCustomer::AssignPhone(CCustomer COff)
 {
-	this->Phone = COff.Phone;
+	this->m_Phone = COff.m_Phone;
 }
 
 
 void CCustomer::AssignPassport(CCustomer COff)
 {
-	this->Passport = COff.Passport;
+	this->m_Passport = COff.m_Passport;
 }
 
 void CCustomer::AssignTourCode(CCustomer COff)
 {
-	this->TourCode = COff.TourCode;
+	this->m_TourCode = COff.m_TourCode;
 }
 
 void CCustomer::AssignTransportCode(CCustomer COff)
 {
-	this->TransportCode = COff.TransportCode;
+	this->m_TransportCode = COff.m_TransportCode;
 }
 
 
 //////////////////////////////////////////////////////////////////////////////////////
 
 // Viết các hàm trong danh sách khách hàng
-CListCustomer::CListCustomer()
-{
-	this->SL = 0;
-}
-
-CListCustomer::~CListCustomer()
-{
-	if(!this->Cus.empty())
-	{
-		this->Cus.~vector();
-	}
-}
-
-
-void CListCustomer::Swap(CCustomer& a, CCustomer& b) // hoán vị thông tin hai khách hàng
-{
-	CCustomer temp;
-	temp = a;
-	a = b; 
-	b= temp;
-}
-void CListCustomer::SortList() // sắp xếp danh sách khách hàng tăng dần theo ID
-{
-	int min;
-	for(int i = 0; i < this->SL-1; i++)
-	{
-		for(int j = i + 1; j < this->SL; j++)
-			if(this->Cus[j].getID() < this->Cus[i].getID())
-				this->Swap(this->Cus[i], this->Cus[j]);
-	}
-}
-
+//CListCustomer::CListCustomer()
+//{
+//	this->SL = 0;
+//}
+//
+//CListCustomer::~CListCustomer()
+//{
+//	if(!this->Cus.empty())
+//	{
+//		this->Cus.~vector();
+//	}
+//}
+//
+//
+//void CListCustomer::Swap(CCustomer& a, CCustomer& b) // hoán vị thông tin hai khách hàng
+//{
+//	CCustomer temp;
+//	temp = a;
+//	a = b; 
+//	b= temp;
+//}
+//void CListCustomer::SortList() // sắp xếp danh sách khách hàng tăng dần theo ID
+//{
+//	int min;
+//	for(int i = 0; i < this->SL-1; i++)
+//	{
+//		for(int j = i + 1; j < this->SL; j++)
+//			if(this->Cus[j].getID() < this->Cus[i].getID())
+//				this->Swap(this->Cus[i], this->Cus[j]);
+//	}
+//}
+//
