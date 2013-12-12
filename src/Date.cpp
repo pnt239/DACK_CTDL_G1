@@ -43,30 +43,30 @@ void CDate::Import(string a)
 	}while(this->m_year < 0 || this->m_month < 0 || this->m_month > 12 || (CheckYear(this->m_year) == 0 && this->m_day > SizeMonth[this->m_month - 1] || this->m_day < 0) || (CheckYear(this->m_year) == 1 && this->m_day > _SizeMonth[this->m_month - 1] || this->m_day < 0)); //Điều kiện dùng của vòng lặp nhập thời gian
 }
 
-int CDate::GetM()
+int CDate::GetMonth()
 {
 	return this->m_month;
 }
 
-int CDate::getD()
+int CDate::getDay()
 {
 	return this->m_day;
 }
 
-int CDate::GetY()
+int CDate::GetYear()
 {
 	return this->m_year;
 }
 
-void CDate::setD(int d)
+void CDate::setDay(int d)
 {
 	this->m_day = d;
 }
-void CDate::setM(int m)
+void CDate::setMonth(int m)
 {
 	this->m_month = m;
 }
-void CDate::setY(int y)
+void CDate::setYear(int y)
 {
 	this->m_year = y;
 }

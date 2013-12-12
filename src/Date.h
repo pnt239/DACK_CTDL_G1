@@ -13,12 +13,12 @@ public:
 	CDate();
 	~CDate();
 	void Import(string a);
-	int getD();
-	int GetM();
-	int GetY();
-	void setD(int d);
-	void setM(int m);
-	void setY(int y);
+	int getDay();
+	int GetMonth();
+	int GetYear();
+	void setDay(int d);
+	void setMonth(int m);
+	void setYear(int y);
 };
 
 bool CheckYear(int year);
