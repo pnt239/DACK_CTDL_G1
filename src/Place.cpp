@@ -9,11 +9,11 @@ CPlace::~CPlace()
 {
 	this->m_name.clear();
 }
-void CPlace::setName(std::string name)
+void CPlace::setName(ustring name)
 {
 	this->m_name = name;
 }
-std::string CPlace::getName()
+ustring CPlace::getName()
 {
 	return this->m_name;
 }
