@@ -4,7 +4,8 @@ using namespace std;
 
 int main()
 {
-	wstring s;
+	wstring s1 = L"a";
+	wstring s2 = L"b";
 	string a;
 	
 	return 0;
