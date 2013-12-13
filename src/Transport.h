@@ -3,7 +3,9 @@
 #include <vector>
 #include <Windows.h>
 using namespace std;
-
+#pragma once
+#ifndef _transpost_
+#define _transpost_
 static vector<string> ListNumplate;
 
 class CTransport
@@ -12,6 +14,7 @@ protected:
 	int m_Vehicles;		//loại xe nào? 
 	string m_NumPlate;		//biển số xe;
 	int m_Seat;				//số chỗ ngồi
+
 	float m_Gasoline;		//lượng xăng
 	float m_FuelTank;		//dung tích bình xăng
 	float m_LossGar;		//độ hao xăng
@@ -43,3 +46,4 @@ public:
 	void ExportAll();
 	bool Move(float km);
 };
+#endif

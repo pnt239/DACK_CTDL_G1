@@ -1,5 +1,5 @@
 ﻿#include"C_Transport.h"
-#include"Transport.h"
+
 
 // Viết các hàm trong lớp car
 CCar::CCar()

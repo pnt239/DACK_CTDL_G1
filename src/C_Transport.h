@@ -1,6 +1,7 @@
-﻿#pragma once
-#include "Transport.h"
-
+﻿#include "Transport.h"
+#pragma once
+#ifndef _C_Transport_
+#define _C_Transport_
 class CCar:public CTransport
 {
 private:
@@ -37,3 +38,4 @@ public:
 	float Get_LossGar();
 	void setPlane(); // cụ thể hoá các thuộc tính của máy bay
 };
+#endif
