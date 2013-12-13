@@ -36,7 +36,7 @@ UINT CTour::getID()
 {
 	return this->m_id;
 }
-UINT CTour::getPlace()	//co tham chieu
+UINT CTour::getPlace()
 {
 	return this->m_placeId;
 }

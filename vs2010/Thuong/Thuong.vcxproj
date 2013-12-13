@@ -25,7 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\CCustomer.h" />
-    <ClInclude Include="..\..\src\CDuLich.h" />
+    <ClInclude Include="..\..\src\DuLich.h" />
     <ClInclude Include="..\..\src\CMap.h" />
     <ClInclude Include="..\..\src\CTransport.h" />
     <ClInclude Include="..\..\src\C_Transport.h" />

@@ -89,7 +89,7 @@
     <ClInclude Include="..\..\src\CMap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\CDuLich.h">
+    <ClInclude Include="..\..\src\DuLich.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

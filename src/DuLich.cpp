@@ -1,4 +1,4 @@
-﻿#include "CDuLich.h"
+﻿#include "DuLich.h"
 
 //tìm kiếm tour qua ID
 CTour *CDuLich::searchTour(UINT id)
