@@ -17,6 +17,7 @@
     <ClCompile Include="..\src\C_Transport.cpp" />
     <ClCompile Include="..\src\Database.cpp" />
     <ClCompile Include="..\src\Date.cpp" />
+    <ClCompile Include="..\src\DuLich.cpp" />
     <ClCompile Include="..\src\Officer.cpp" />
     <ClCompile Include="..\src\Place.cpp" />
     <ClCompile Include="..\src\Tour.cpp" />
@@ -33,6 +34,7 @@
     <ClInclude Include="..\src\C_Transport.h" />
     <ClInclude Include="..\src\Database.h" />
     <ClInclude Include="..\src\Date.h" />
+    <ClInclude Include="..\src\DuLich.h" />
     <ClInclude Include="..\src\LinkedList.h" />
     <ClInclude Include="..\src\List.h" />
     <ClInclude Include="..\src\Manager.h" />

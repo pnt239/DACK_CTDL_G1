@@ -15,13 +15,12 @@ CDatabase::~CDatabase()
 void CDatabase::readCustomer(string fileCustomer)
 {
 	UINT ID; 
-	ustring Name; 
-	CDate BirthDay;
+	ustring Name;
+	int day, mon, year;
 	ustring Phone; 
 	ustring Passport;
 	UINT TourCode;
 	UINT PlaceCode;
-	ustring TransportCode;
 
 	m_fileCustomer = fileCustomer;
 	ifstream hFile(m_fileCustomer, ios::binary | ios::in);
@@ -30,7 +29,22 @@ void CDatabase::readCustomer(string fileCustomer)
 	int count = 0;
 	hFile.read((char*)&count, sizeof(int));
 	for (int i=0; i<count; i++) {
-		//
+		// doc id
+		hFile.read((char*)&ID, sizeof(UINT));
+		Name.ConvertUTF8ToUTF16(readStr(hFile));
+		// doc ngay sinh
+		hFile.read((char*)&day, sizeof(int));
+		hFile.read((char*)&mon, sizeof(int));
+		hFile.read((char*)&year, sizeof(int));
+		CDate BirthDay(day, mon, year);
+		// doc phone
+		Phone.ConvertUTF8ToUTF16(readStr(hFile));
+		// doc passport
+		Passport.ConvertUTF8ToUTF16(readStr(hFile));
+		// doc TourCode + PlaceCode
+		hFile.read((char*)&TourCode, sizeof(UINT));
+		hFile.read((char*)&PlaceCode, sizeof(UINT));
+		m_travel.creatCustomer(ID, Name, Phone, Passport, TourCode, PlaceCode);
 	}
 	hFile.close();
 }
@@ -120,4 +134,21 @@ void CDatabase::save()
 void CDatabase::readAll()
 {
 	//
+}
+
+LPSTR CDatabase::readStr(ifstream &hFile)
+{
+	CHAR len;
+	LPSTR str; 
+	// doc chieu dai chuoi name
+	hFile.read((char*)&len, sizeof(CHAR));
+	// cap phat dong + dong chuoi
+	str = new CHAR[len];
+	hFile.read(str, len);
+	return str;
+}
+
+CDuLich &CDatabase::getTravel()
+{
+	return m_travel;
 }
