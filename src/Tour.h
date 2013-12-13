@@ -14,7 +14,7 @@ private:
 	CPlace &m_place; // Dia diem cua diem du lich, co tham chieu!
 	CDate m_timeStart;
 	CDate m_timeEnd;
-	std::string m_name; // ten tour
+	ustring m_name; // ten tour
 public:
 	CTour();
 	~CTour();
@@ -23,9 +23,11 @@ public:
 	void setPlace(ustring place);
 	void setTimeStart(CDate time);
 	void setTimeEnd(CDate time);
+	void setName(ustring name);
 
 	UINT getID();
 	CPlace &getPlace(); // co tham chieu!
 	CDate getTimeStart();
 	CDate getimeEnd();
+	ustring getName();
 };

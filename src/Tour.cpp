@@ -26,6 +26,11 @@ void CTour::setTimeEnd(CDate time)
 	this->m_timeEnd = time;
 }
 
+void CTour::setName(ustring name)
+{
+	this->m_name = name;
+}
+
 UINT CTour::getID()
 {
 	return this->m_id;
@@ -41,4 +46,9 @@ CDate CTour::getTimeStart()
 CDate CTour::getimeEnd()
 {
 	return this->m_timeEnd;
+}
+
+ustring CTour::getName()
+{
+	return this->m_name;
 }

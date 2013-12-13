@@ -19,18 +19,16 @@ public:
 	CTour *searchTour(UINT m_id);
 	CTour *searchTour(string Place);
 
-
-
 	CList<COfficer*> searchListOfficer(UINT TourCode);
-	CList<..>
-	CList<>
+	CList<CTransport*> searchListTransport(UINT TourCode);;
+	CList<CCustomer*> searchListCustomer(UINT TourCode);
 
 	COfficer* searchOfficer(UINT ID);
 	COfficer* searchOfficer(string name);
 	CCustomer* searchCustomer(UINT ID);
 	CCustomer* searchCustomer(string name);
 
-	void creatTour( string place, CDate m_timeStart, CDate m_timeEnd, string m_name);
+	void creatTour( ustring place, CDate m_timeStart, CDate m_timeEnd, string m_name);
 };
 
 //tìm kiếm tour qua ID
@@ -66,7 +64,7 @@ CCustomer *CDuLich::searchCustomer(string name)
 }
 
 //tìm kiếm nhân viên qua ID
-CList<COfficer*> CDuLich::searchOfficer(UINT TourCode)
+CList<COfficer*> CDuLich::searchListOfficer(UINT TourCode)
 {
 	for(int i = 0;i < this->m_officer.size();i++)
 		if(this->m_officer[i]->getTourCode() == TourCode)
@@ -74,7 +72,7 @@ CList<COfficer*> CDuLich::searchOfficer(UINT TourCode)
 	return this->m_off;
 }
 
-void CDuLich::creatTour(string place,CDate m_timeStart, CDate m_timeEnd, string m_name)
+void CDuLich::creatTour(ustring place,CDate m_timeStart, CDate m_timeEnd, string m_name)
 {
 	CTour* m_newTour = new CTour();
 	UINT placeCode;
@@ -85,10 +83,10 @@ void CDuLich::creatTour(string place,CDate m_timeStart, CDate m_timeEnd, string 
 		CMap.add(place);
 	}
 
-	m_newTour->setPlace(placeCode);
-	m_newTour->setTimeStart(..);
-	m_newTour->setTimeEnd(..);
-	m_newTour->setName(..);
+	m_newTour->setPlace(place);
+	m_newTour->setTimeStart(m_timeStart);
+	m_newTour->setTimeEnd(m_timeEnd);
+	m_newTour->setName(m_name);
 }
 
 void main()
