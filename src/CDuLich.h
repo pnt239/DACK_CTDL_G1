@@ -19,6 +19,8 @@ private:
 	CList<COfficer*> m_off;
 	CList<CCustomer*> m_cus;
 	CList<CTransport*> m_Trans;
+
+	CMap m_map;
 public:
 	CTour *searchTour(UINT m_id);
 	CTour *searchTour(ustring Place);
@@ -38,6 +40,6 @@ public:
 
 	void creatTour( ustring place, CDate m_timeStart, CDate m_timeEnd, ustring m_name);
 	void creatOfficer(UINT id, ustring name, ustring phone,ustring passport, UINT tourCode, ustring transportCode);
-	void creatCustomer(UINT id, ustring name, ustring phone, ustring passport, UINT tourCode, UINT placeCode, ustring transportCode);
+	void creatCustomer(UINT id, ustring name, ustring phone, ustring passport, UINT tourCode, UINT placeCode);
 	void creatTransport(UINT id, UINT Vehicles, ustring NumPlate, UINT Seat,float Gasoline,float FuelTank,float LossGar,ustring Status,UINT Tourcode);
 };

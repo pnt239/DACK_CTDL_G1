@@ -21,6 +21,7 @@ public:
 	void setX(INT x);
 	void setY(INT y);
 	void setID(UINT id);
+	UINT getID();
 	INT getX();
 	INT getY();
 };

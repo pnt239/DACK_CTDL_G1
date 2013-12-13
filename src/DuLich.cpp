@@ -84,15 +84,15 @@ CList<CTransport*> CDuLich::searchListTransport(UINT TourCode)
 void CDuLich::creatTour(ustring place,CDate m_timeStart, CDate m_timeEnd, ustring m_name)
 {
 	CTour* m_newTour = new CTour();
-	bool placeCode;
+	INT placeCode;
 	
 	// tìm kiếm địa điểm place này đã tồn tài chưa
-	if ((placeCode = CMap:Compare(place)) == 1)
+	if ((placeCode = m_map.search(place)) == 1)
 	{
 		// nếu mà không có thì add vào
-		CMap.add(place);
+		m_map.addTop(place);
 	}
-	m_newTour->setPlace(place);
+	m_newTour->setPlace(placeCode);
 	m_newTour->setTimeStart(m_timeStart);
 	m_newTour->setTimeEnd(m_timeEnd);
 	m_newTour->setName(m_name);
@@ -113,7 +113,7 @@ void CDuLich::creatOfficer(UINT id, ustring name, ustring phone,ustring passport
 }
 
 //thêm khách hàng
-void CDuLich::creatCustomer(UINT id, ustring name, ustring phone, ustring passport, UINT tourCode, UINT placeCode, ustring transportCode)
+void CDuLich::creatCustomer(UINT id, ustring name, ustring phone, ustring passport, UINT tourCode, UINT placeCode)
 {
 	CCustomer* m_newCus = new CCustomer();
 	m_newCus->setID(id);
@@ -122,7 +122,6 @@ void CDuLich::creatCustomer(UINT id, ustring name, ustring phone, ustring passpo
 	m_newCus->setPassport(passport);
 	m_newCus->setTourCode(tourCode);
 	m_newCus->setPlaceCode(placeCode);
-	m_newCus->setTransportCode(transportCode);
 	this->m_customer.push(m_newCus);
 }
 

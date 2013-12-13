@@ -11,7 +11,7 @@ class CTour
 {
 private:
 	UINT m_id;
-	CPlace &m_place; // Dia diem cua diem du lich, co tham chieu!
+	UINT m_placeId;
 	CDate m_timeStart;
 	CDate m_timeEnd;
 	ustring m_name; // ten tour
@@ -20,13 +20,13 @@ public:
 	~CTour();
 
 	void setID(UINT id);
-	void setPlace(ustring place);
+	void setPlace(UINT placeID);
 	void setTimeStart(CDate time);
 	void setTimeEnd(CDate time);
 	void setName(ustring name);
 
 	UINT getID();
-	CPlace &getPlace(); // co tham chieu!
+	UINT getPlace();
 	CDate getTimeStart();
 	CDate getimeEnd();
 	ustring getName();

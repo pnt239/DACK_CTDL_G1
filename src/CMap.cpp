@@ -22,7 +22,7 @@ INT CMap::search(ustring s)
 {
 	for(INT i = 0; i < this->m_map.size() - 1; i++)
 		if(s.compare(this->m_map[i]->getName()) == 0)
-			return this->m_map[i]->getID;
+			return this->m_map[i]->getID();
 	return -1;
 }
 
@@ -159,7 +159,7 @@ float CMap::finalPath(INT a, INT b)
 {
 	char * name = "Map.txt";
 	this->readGraph(name);
-	this->addTop();
+	//this->addTop();
 	INT i;
 	for(INT i = 0; i < this->m_n; i++)
 	{
