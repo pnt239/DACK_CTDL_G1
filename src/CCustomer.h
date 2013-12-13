@@ -16,7 +16,7 @@ protected:
 	ustring m_Passport; // hộ chiếu
 	UINT m_TourCode; // mã tour
 	UINT m_PlaceCode;	//mã địa điểm
-	ustring m_TransportCode; // mã số phương tiện
+//	ustring m_TransportCode; // mã số phương tiện
 public:
 	CCustomer();
 	 
@@ -39,15 +39,15 @@ public:
 	UINT getTourCode();
 	void setTourCode(UINT TourCode);
 
-	ustring getTransportCode();
-	void setTransportCode(ustring Transport);
+//	ustring getTransportCode();
+//	void setTransportCode(ustring Transport);
 
 	// hàm assign các thuộc tính
 	void AssignName(CCustomer);
 	void AssignPhone(CCustomer);
 	void AssignPassport(CCustomer);
 	void AssignTourCode(CCustomer);
-	void AssignTransportCode(CCustomer);
+//	void AssignTransportCode(CCustomer);
 	void AssignPlaceCode(CCustomer);
 };
 

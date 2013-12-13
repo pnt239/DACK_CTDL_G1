@@ -11,7 +11,7 @@ CCustomer::CCustomer()
 	this->m_Passport.Set(L"NULL");
 	this->m_Phone.Set(L"NULL");
 	this->m_TourCode = -1;
-	this->m_TransportCode.Set(L"NULL");
+
 }
 UINT CCustomer::getID()
 {
@@ -73,15 +73,15 @@ void CCustomer::setTourCode(UINT TourCode)
 	this->m_TourCode = TourCode;
 }
 
-ustring CCustomer::getTransportCode()
-{
-	return this->m_TransportCode;
-}
-
-void CCustomer::setTransportCode(ustring TransportCode)
-{
-	this->m_TransportCode = TransportCode;
-}
+//ustring CCustomer::getTransportCode()
+//{
+//	return this->m_TransportCode;
+//}
+//
+//void CCustomer::setTransportCode(ustring TransportCode)
+//{
+//	this->m_TransportCode = TransportCode;
+//}
 
 void CCustomer::AssignName(CCustomer COff)
 {
@@ -104,10 +104,10 @@ void CCustomer::AssignTourCode(CCustomer COff)
 	this->m_TourCode = COff.m_TourCode;
 }
 
-void CCustomer::AssignTransportCode(CCustomer COff)
-{
-	this->m_TransportCode = COff.m_TransportCode;
-}
+//void CCustomer::AssignTransportCode(CCustomer COff)
+//{
+//	this->m_TransportCode = COff.m_TransportCode;
+//}
 
 void CCustomer::AssignPlaceCode(CCustomer COff)
 {
