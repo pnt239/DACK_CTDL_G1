@@ -11,10 +11,37 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\CCustomer.cpp" />
+    <ClCompile Include="..\src\CMap.cpp" />
+    <ClCompile Include="..\src\Customer.cpp" />
+    <ClCompile Include="..\src\C_Transport.cpp" />
+    <ClCompile Include="..\src\Database.cpp" />
+    <ClCompile Include="..\src\Date.cpp" />
+    <ClCompile Include="..\src\Officer.cpp" />
+    <ClCompile Include="..\src\Place.cpp" />
+    <ClCompile Include="..\src\Tour.cpp" />
+    <ClCompile Include="..\src\Transport.cpp" />
+    <ClCompile Include="..\src\TransportManager.cpp" />
+    <ClCompile Include="..\src\ustring.cpp" />
     <ClCompile Include="TravelManager.cpp" />
     <ClCompile Include="TravelManagerFrame.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\CCustomer.h" />
+    <ClInclude Include="..\src\CMap.h" />
+    <ClInclude Include="..\src\CTransport.h" />
+    <ClInclude Include="..\src\C_Transport.h" />
+    <ClInclude Include="..\src\Database.h" />
+    <ClInclude Include="..\src\Date.h" />
+    <ClInclude Include="..\src\LinkedList.h" />
+    <ClInclude Include="..\src\List.h" />
+    <ClInclude Include="..\src\Manager.h" />
+    <ClInclude Include="..\src\Officer.h" />
+    <ClInclude Include="..\src\Place.h" />
+    <ClInclude Include="..\src\Tour.h" />
+    <ClInclude Include="..\src\Transport.h" />
+    <ClInclude Include="..\src\TransportManager.h" />
+    <ClInclude Include="..\src\ustring.h" />
     <ClInclude Include="TravelManager.h" />
     <ClInclude Include="TravelManagerFrame.h" />
   </ItemGroup>
@@ -50,7 +77,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)..\$(Configuration)\vs2012\</OutDir>
-    <IncludePath>$(VCInstallDir)include\wx\msvc;$(VCInstallDir)include\wx;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)..\src;$(VCInstallDir)include\wx\msvc;$(VCInstallDir)include\wx;$(IncludePath)</IncludePath>
     <LibraryPath>$(VCInstallDir)lib\vc_lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
