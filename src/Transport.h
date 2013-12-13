@@ -3,9 +3,7 @@
 #include <vector>
 #include <Windows.h>
 using namespace std;
-#pragma once
-#ifndef _transpost_
-#define _transpost_
+
 static vector<string> ListNumplate;
 
 class CTransport
@@ -46,4 +44,3 @@ public:
 	void ExportAll();
 	bool Move(float km);
 };
-#endif

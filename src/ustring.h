@@ -6,8 +6,7 @@
 #include <strsafe.h>
 #include <windows.h>
 #pragma once
-#ifndef _ustring_
-#define _ustring_
+
 class ustring
 {
 private:
@@ -43,4 +42,3 @@ public:
 	int compare(ustring _Ptr);
 
 };
-#endif
