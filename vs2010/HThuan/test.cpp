@@ -4,5 +4,8 @@ using namespace std;
 
 int main()
 {
+	wstring s;
+	string a;
+	
 	return 0;
 }

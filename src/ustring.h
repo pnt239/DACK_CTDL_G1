@@ -37,4 +37,5 @@ public:
         out<<c.str.data();
         return out;
 	}
+	int compare(const wchar_t *_Ptr);
 };
