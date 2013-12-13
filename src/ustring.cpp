@@ -217,7 +217,7 @@ ustring& ustring::operator= (LPWSTR str)
 	this->str.assign(str);
 	return (*this);
 }
-int ustring::compare(const wchar_t *_Ptr)
+int ustring::compare(ustring _Ptr)
 {
-	return this->str.compare(_Ptr);
+	return this->str.compare(_Ptr.Get());
 }
