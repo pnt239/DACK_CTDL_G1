@@ -4,8 +4,6 @@
 #include <Windows.h>
 using namespace std;
 
-static vector<ustring> ListNumplate;
-
 class CTransport
 {
 protected:
@@ -42,6 +40,5 @@ public:
 	UINT get_Tourcode();
 	UINT getID();
 
-	bool Compare_Numplate();
 	bool Move(float km);
 };
