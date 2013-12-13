@@ -15,6 +15,7 @@
     <ClCompile Include="..\..\src\CMap.cpp" />
     <ClCompile Include="..\..\src\Customer.cpp" />
     <ClCompile Include="..\..\src\C_Transport.cpp" />
+    <ClCompile Include="..\..\src\Database.cpp" />
     <ClCompile Include="..\..\src\Date.cpp" />
     <ClCompile Include="..\..\src\DuLich.cpp" />
     <ClCompile Include="..\..\src\Officer.cpp" />
@@ -25,6 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\CCustomer.h" />
+    <ClInclude Include="..\..\src\Database.h" />
     <ClInclude Include="..\..\src\DuLich.h" />
     <ClInclude Include="..\..\src\CMap.h" />
     <ClInclude Include="..\..\src\CTransport.h" />
