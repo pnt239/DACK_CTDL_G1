@@ -3,6 +3,7 @@
 #include <CCustomer.h>
 #include <Officer.h>
 #include <Transport.h>
+#include <ustring.h>
 using namespace std;
 // File khong can cho chu C o dau
 
@@ -17,32 +18,35 @@ private:
 	CList<COfficer*> m_off;
 public:
 	CTour *searchTour(UINT m_id);
-	CTour *searchTour(string Place);
+	CTour *searchTour(ustring Place);
 
 	CList<COfficer*> searchListOfficer(UINT TourCode);
-	CList<CTransport*> searchListTransport(UINT TourCode);;
+	CList<CTransport*> searchListTransport(UINT TourCode);
 	CList<CCustomer*> searchListCustomer(UINT TourCode);
 
 	COfficer* searchOfficer(UINT ID);
-	COfficer* searchOfficer(string name);
+	COfficer* searchOfficer(ustring name);
 	CCustomer* searchCustomer(UINT ID);
-	CCustomer* searchCustomer(string name);
+	CCustomer* searchCustomer(ustring name);
 
-	void creatTour( ustring place, CDate m_timeStart, CDate m_timeEnd, string m_name);
+	void creatTour( ustring place, CDate m_timeStart, CDate m_timeEnd, ustring m_name);
 };
 
 //tìm kiếm tour qua ID
-CTour *CDuLich::searchTour(UINT m_id)
+CTour *CDuLich::searchTour(UINT id)
 {
 	for(int i = 0; i < this->m_tour.size();i++)
-		if(this->m_tour[i]->getID() == m_id)
+		if(this->m_tour[i]->getID() == id)
 			return this->m_tour[i];
 	return NULL;
 }
 
 //tìm kiếm tour qua tên tour
-CTour *CDuLich::searchTour(string Place)
+CTour *CDuLich::searchTour(ustring Place)
 {
+	for(int i = 0;i < this->m_tour.size();i++)
+		if(this->m_tour[i]->getName().compare(Place))
+			return this->m_tour[i];
 	return NULL;
 }
 
@@ -55,7 +59,7 @@ CCustomer *CDuLich::searchCustomer(UINT m_id)
 	return NULL;
 }
 //tìm kiếm khách hàng qua tên
-CCustomer *CDuLich::searchCustomer(string name)
+CCustomer *CDuLich::searchCustomer(ustring name)
 {
 	for(int i = 0;i < this->m_customer.size();i++)
 		if(this->m_customer[i]->getName() == name)
@@ -72,7 +76,7 @@ CList<COfficer*> CDuLich::searchListOfficer(UINT TourCode)
 	return this->m_off;
 }
 
-void CDuLich::creatTour(ustring place,CDate m_timeStart, CDate m_timeEnd, string m_name)
+void CDuLich::creatTour(ustring place,CDate m_timeStart, CDate m_timeEnd, ustring m_name)
 {
 	CTour* m_newTour = new CTour();
 	UINT placeCode;

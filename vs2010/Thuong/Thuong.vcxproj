@@ -10,6 +10,32 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\CCustomer.cpp" />
+    <ClCompile Include="..\..\src\Customer.cpp" />
+    <ClCompile Include="..\..\src\C_Transport.cpp" />
+    <ClCompile Include="..\..\src\Date.cpp" />
+    <ClCompile Include="..\..\src\Officer.cpp" />
+    <ClCompile Include="..\..\src\Place.cpp" />
+    <ClCompile Include="..\..\src\Tour.cpp" />
+    <ClCompile Include="..\..\src\Transport.cpp" />
+    <ClCompile Include="..\..\src\ustring.cpp" />
+    <ClCompile Include="DuLich.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\CCustomer.h" />
+    <ClInclude Include="..\..\src\CTransport.h" />
+    <ClInclude Include="..\..\src\C_Transport.h" />
+    <ClInclude Include="..\..\src\Date.h" />
+    <ClInclude Include="..\..\src\Library.h" />
+    <ClInclude Include="..\..\src\LinkedList.h" />
+    <ClInclude Include="..\..\src\List.h" />
+    <ClInclude Include="..\..\src\Officer.h" />
+    <ClInclude Include="..\..\src\Place.h" />
+    <ClInclude Include="..\..\src\Tour.h" />
+    <ClInclude Include="..\..\src\Transport.h" />
+    <ClInclude Include="..\..\src\ustring.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{18AD38B5-ABAE-4081-9E40-9E48162D95DA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -75,9 +101,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="CDuLich.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
