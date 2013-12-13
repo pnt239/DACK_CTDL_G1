@@ -37,7 +37,7 @@ public:
 
 	void creatTour( ustring place, CDate m_timeStart, CDate m_timeEnd, ustring m_name);
 	void creatOfficer(UINT id, ustring name, ustring phone,ustring passport, UINT tourCode, ustring transportCode);
-	void creatCustomer();
+	void creatCustomer(UINT id, ustring name, ustring phone, ustring passport, UINT tourCode, UINT placeCode, ustring transportCode);
 	void creatTransport();
 };
 
@@ -136,6 +136,13 @@ void CDuLich::creatTour(ustring place,CDate m_timeStart, CDate m_timeEnd, ustrin
 	m_newTour->setTimeStart(m_timeStart);
 	m_newTour->setTimeEnd(m_timeEnd);
 	m_newTour->setName(m_name);
+	this->m_tour.push(m_newTour);
+}
+
+void CDuLich::creatOfficer(UINT id, ustring name, ustring phone,ustring passport, UINT tourCode, ustring transportCode)
+{
+	COfficer* m_newOff = new COfficer();
+
 }
 
 void main()
