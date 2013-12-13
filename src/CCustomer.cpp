@@ -7,11 +7,11 @@ using namespace std;
 CCustomer::CCustomer()
 {
 	this->m_ID = -1;
-	this->m_Name = "NULL";
-	this->m_Passport = "NULL";
-	this->m_Phone = "NULL";
+	this->m_Name.Set(L"NULL");
+	this->m_Passport.Set(L"NULL");
+	this->m_Phone.Set(L"NULL");
 	this->m_TourCode = -1;
-	this->m_TransportCode = "NULL";
+	this->m_TransportCode.Set(L"NULL");
 }
 int CCustomer::getID()
 {
@@ -33,32 +33,32 @@ void CCustomer::setPlaceCode(UINT placecode)
 }
 
 
-std::string CCustomer::getName()
+ustring CCustomer::getName()
 {
 	return this->m_Name;
 }
 
-void CCustomer::setName(std::string Name)
+void CCustomer::setName(ustring Name)
 {
 	this->m_Name = Name;
 }
 
-std::string CCustomer::getPhone()
+ustring CCustomer::getPhone()
 {
 	return this->m_Phone;
 }
 
-void CCustomer::setPhone(std::string Phone)
+void CCustomer::setPhone(ustring Phone)
 {
 	this->m_Phone = Phone;
 }
 
-std::string CCustomer::getPassport()
+ustring CCustomer::getPassport()
 {
 	return this->m_Passport;
 }
 
-void CCustomer::setPassport(std::string Passport)
+void CCustomer::setPassport(ustring Passport)
 {
 	this->m_Passport = Passport;
 }
@@ -73,12 +73,12 @@ void CCustomer::setTourCode(UINT TourCode)
 	this->m_TourCode = TourCode;
 }
 
-std::string CCustomer::getTransportCode()
+ustring CCustomer::getTransportCode()
 {
 	return this->m_TransportCode;
 }
 
-void CCustomer::setTransportCode(std::string TransportCode)
+void CCustomer::setTransportCode(ustring TransportCode)
 {
 	this->m_TransportCode = TransportCode;
 }
