@@ -3,55 +3,55 @@
 #include <iostream>
 #include <Windows.h>
 #include <vector>
-#include<string>
+#include<ustring.h>
 using namespace std;
 
 // Viết các hàm trong lớp nhân viên
 COfficer::COfficer()
 {
 	this->m_ID = -1;
-	this->m_Name = "NULL";
-	this->m_Passport = "NULL";
-	this->m_Phone = "NULL";
+	this->m_Name.Set(L"NULL");
+	this->m_Passport.Set(L"NULL");
+	this->m_Phone.Set(L"NULL");
 	this->m_TourCode = -1;
-	this->m_TransportCode = "NULL";
+	this->m_TransportCode.Set(L"NULL");
 }
-int COfficer::getID()
+UINT COfficer::getID()
 {
 	return this->m_ID;
 }
 
-void COfficer::setID(int ID)
+void COfficer::setID(UINT ID)
 {
 	this->m_ID = ID;
 }
 
-string COfficer::getName()
+ustring COfficer::getName()
 {
 	return this->m_Name;
 }
 
-void COfficer::setName(std::string Name)
+void COfficer::setName(ustring Name)
 {
 	this->m_Name = Name;
 }
 
-std::string COfficer::getPhone()
+ustring COfficer::getPhone()
 {
 	return this->m_Phone;
 }
 
-void COfficer::setPhone(std::string Phone)
+void COfficer::setPhone(ustring Phone)
 {
 	this->m_Phone = Phone;
 }
 
-std::string COfficer::getPassport()
+ustring COfficer::getPassport()
 {
 	return this->m_Passport;
 }
 
-void COfficer::setPassport(std::string Passport)
+void COfficer::setPassport(ustring Passport)
 {
 	this->m_Passport = Passport;
 }
@@ -66,12 +66,12 @@ void COfficer::setTourCode(UINT TourCode)
 	this->m_TourCode = TourCode;
 }
 
-std::string COfficer::getTransportCode()
+ustring COfficer::getTransportCode()
 {
 	return this->m_TransportCode;
 }
 
-void COfficer::setTransportCode(std::string TransportCode)
+void COfficer::setTransportCode(ustring TransportCode)
 {
 	this->m_TransportCode = TransportCode;
 }

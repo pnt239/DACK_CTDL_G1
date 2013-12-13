@@ -6,34 +6,34 @@
 class COfficer
 {
 protected:
-	int m_ID; 
-	std::string m_Name; // tên nhân viên
-	//Day BirthDay; // ngày tháng năm sinh thuộc lớp ngày
-	std::string m_Phone; // số điện thoại
-	std::string m_Passport; // hộ chiếu
+	UINT m_ID; 
+	ustring m_Name; // tên nhân viên
+	//CDate BirthDay; // ngày tháng năm sinh thuộc lớp ngày
+	ustring m_Phone; // số điện thoại
+	ustring m_Passport; // hộ chiếu
 	UINT m_TourCode; // mã tour
-	std::string m_TransportCode; // mã số phương tiện
+	ustring m_TransportCode; // mã số phương tiện
 public:
 	COfficer();
 
 	//hàm getter và setter các thuộc tính
-	int getID();
-	void setID(int ID);
+	UINT getID();
+	void setID(UINT ID);
 
-	std::string getName();
-	void setName(std::string Name);
+	ustring getName();
+	void setName(ustring Name);
 
-	std::string getPhone();
-	void setPhone(std::string Phone);
+	ustring getPhone();
+	void setPhone(ustring Phone);
 
-	std::string getPassport();
-	void setPassport(std::string Passport);
+	ustring getPassport();
+	void setPassport(ustring Passport);
 
 	UINT getTourCode();
 	void setTourCode(UINT TourCode);
 
-	std::string getTransportCode();
-	void setTransportCode(std::string Transport);
+	ustring getTransportCode();
+	void setTransportCode(ustring Transport);
 
 	// hàm assign 
 	void Assign(COfficer); 
