@@ -21,7 +21,7 @@ void CMap::AddMap(CPlace* s)
 bool CMap::Compare(ustring s)
 {
 	bool test = 0;
-	for(int i = 0; i < this->m_map.size() - 1; i++)
+	for(INT i = 0; i < this->m_map.size() - 1; i++)
 	{
 		if(s.compare(this->m_map[i]->getName()) == 0)
 		{
@@ -38,13 +38,13 @@ bool CMap::Compare(ustring s)
 void CMap::creatArr()
 {
 	this->m_Arr = new float *[this->m_n];
-	for(int i = 0; i < this->m_n; i++)
+	for(INT i = 0; i < this->m_n; i++)
 	{
 		this->m_Arr[m_n] = new float[m_n];
 	}
-	for(int i = 0; i < this->m_n; i++)
+	for(INT i = 0; i < this->m_n; i++)
 	{
-		for(int j = 0; j < this->m_n; j++)
+		for(INT j = 0; j < this->m_n; j++)
 		{
 			this->m_Arr[i][j] = 0;
 		}
@@ -66,8 +66,8 @@ bool CMap::readGraph(char* name)
 	{
 		f >> this->m_n;
 		this->creatArr();
-		for(int i = 0; i < m_n; i++)
-			for(int j = 0; j < m_n; j++)
+		for(INT i = 0; i < m_n; i++)
+			for(INT j = 0; j < m_n; j++)
 			{
 				f >> this->m_Arr[i][j];
 			}
@@ -82,9 +82,9 @@ void CMap::writeFile(char* name)
 	fstream f;
 	f.open(name, ios_base::out);
 	f << this->m_n << endl;
-	for(int i = 0; i < this->m_n; i++)
+	for(INT i = 0; i < this->m_n; i++)
 	{
-		for(int j = 0; j < this->m_n; j++)
+		for(INT j = 0; j < this->m_n; j++)
 		{
 			f << this->m_Arr[i][j] << " ";
 		}
@@ -98,11 +98,11 @@ void CMap::addTop()
 {
 	if(this->Compare(this->m_map[this->m_map.size()]->getName()))		//nếu đỉnh đó đã có thì bỏ qua
 		return;
-	int m = this->m_n;
+	INT m = this->m_n;
 	float tmp[100][100];
-	for(int i = 0; i < m; i++)
+	for(INT i = 0; i < m; i++)
 	{
-		for(int j = 0; j < m; j++)
+		for(INT j = 0; j < m; j++)
 		{
 			tmp[i][j] = this->m_Arr[i][j];
 		}
@@ -110,17 +110,17 @@ void CMap::addTop()
 	this->m_n += 1;
 	this->creatArr();
 
-	for(int i = 0; i < m; i++)
+	for(INT i = 0; i < m; i++)
 	{
-		for(int j = 0; j < m; j++)
+		for(INT j = 0; j < m; j++)
 		{
 			this->m_Arr[i][j] = tmp[i][j];
 		}
 	}
-	int t;
+	INT t;
 	srand(time(NULL));
 	t = rand()%m;
-	for(int i = 0; i < t; i++)
+	for(INT i = 0; i < t; i++)
 	{
 		t = rand()%m;
 		if(this->m_Arr[t][this->m_n - 1] != 0)
@@ -131,9 +131,9 @@ void CMap::addTop()
 //tìm đường đi ngắn nhất trong ma trận
 float CMap::findPathMin()
 {
-	int li = -1;
+	INT li = -1;
 	float p = INF;
-	for(int i = 0; i < this->m_n; i++)
+	for(INT i = 0; i < this->m_n; i++)
 	{
 		if(Label[i] == 0 && Length[i] < p)
 		{
@@ -145,10 +145,10 @@ float CMap::findPathMin()
 }
 
 //cập nhật đường đi
-void CMap::UpdatePath(int u)
+void CMap::UpdatePath(INT u)
 {
 	Label[u] = 1;
-	for(int i = 0; i < this->m_n; i++)
+	for(INT i = 0; i < this->m_n; i++)
 	{
 		if(Label[i] == 0 && this->m_Arr[u][i] > 0 && this->m_Arr[u][i] < INF)	//dinh v chua xet va co noi voi u
 			if(Length[i] > Length[u] + this->m_Arr[u][i])
@@ -159,13 +159,13 @@ void CMap::UpdatePath(int u)
 	}
 }
 //tìm đường đi ngắn nhất
-float CMap::finalPath(int a, int b)
+float CMap::finalPath(INT a, INT b)
 {
 	char * name = "Map.txt";
 	this->readGraph(name);
 	this->addTop();
-	int i;
-	for(int i = 0; i < this->m_n; i++)
+	INT i;
+	for(INT i = 0; i < this->m_n; i++)
 	{
 		Label[i] = 0;
 		Length[i] = INF;
@@ -175,7 +175,7 @@ float CMap::finalPath(int a, int b)
 	Length[a] = 0;
 	while(Label[b] == 0)		//neu chua xet toi dinh cuoi thi tiep tuc
 	{
-		int u = findPathMin();
+		INT u = findPathMin();
 		if(u == -1)
 		{
 			return false;

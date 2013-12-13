@@ -10,12 +10,12 @@
 class CMap
 {
 private:
-	int Save[MAX];
-	int Label[MAX];
+	INT Save[MAX];
+	INT Label[MAX];
 	float Length[MAX];
 	CList<CPlace *> m_map;
 	UINT m_n;		//số đỉnh của đồ thị 
-	int m_Place;
+	INT m_Place;
 	float **m_Arr;	//ma trận lưu thông tin đồ thị
 public:
 	CMap();
@@ -28,6 +28,6 @@ public:
 	void writeFile(char* name);
 	void addTop();
 	float findPathMin();
-	void UpdatePath(int u);
-	float finalPath(int a, int b);
+	void UpdatePath(INT u);
+	float finalPath(INT a, INT b);
 };
