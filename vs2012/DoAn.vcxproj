@@ -94,7 +94,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)..\$(Configuration)\vs2012\</OutDir>
-    <IncludePath>$(VCInstallDir)include\wx\msvc;$(VCInstallDir)include\wx;$(IncludePath)</IncludePath>
+    <IncludePath>..\src;$(VCInstallDir)include\wx\msvc;$(VCInstallDir)include\wx;$(IncludePath)</IncludePath>
     <LibraryPath>$(VCInstallDir)lib\vc_lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

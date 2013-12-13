@@ -226,8 +226,10 @@ TravelManagerFrame::TravelManagerFrame(const wxString& title)
 	wxBoxSizer* b5;
 	b5 = new wxBoxSizer( wxVERTICAL );
 	
-	m_imgMap = new wxStaticBitmap( m_shtMap, wxID_ANY, wxNullBitmap, wxDefaultPosition, wxDefaultSize, 0 );
+	m_imgMap = new wxStaticBitmap( m_shtMap, wxID_ANY, wxBitmap( wxT(".\hinh.png"), wxBITMAP_TYPE_ANY ), wxDefaultPosition, wxSize( -1,300 ), 0 );
 	b5->Add( m_imgMap, 0, wxALL, 5 );
+	//m_imgMap = new wxStaticBitmap( m_shtMap, wxID_ANY, wxNullBitmap, wxDefaultPosition, wxDefaultSize, 0 );
+	//b5->Add( m_imgMap, 0, wxALL, 5 );
 	
 	wxBoxSizer* b5_1;
 	b5_1 = new wxBoxSizer( wxHORIZONTAL );

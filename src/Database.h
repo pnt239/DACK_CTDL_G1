@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include <DuLich.h>
+#include "DuLich.h"
 
 class CDatabase
 {
