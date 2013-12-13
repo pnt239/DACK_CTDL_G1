@@ -142,7 +142,26 @@ void CDuLich::creatTour(ustring place,CDate m_timeStart, CDate m_timeEnd, ustrin
 void CDuLich::creatOfficer(UINT id, ustring name, ustring phone,ustring passport, UINT tourCode, ustring transportCode)
 {
 	COfficer* m_newOff = new COfficer();
+	m_newOff->setID(id);
+	m_newOff->setName(name);
+	m_newOff->setPhone(phone);
+	m_newOff->setPassport(passport);
+	m_newOff->setTourCode(tourCode);
+	m_newOff->setTransportCode(transportCode);
+	this->m_officer.push(m_newOff);
+}
 
+void CDuLich::creatCustomer(UINT id, ustring name, ustring phone, ustring passport, UINT tourCode, UINT placeCode, ustring transportCode)
+{
+	CCustomer* m_newCus = new CCustomer();
+	m_newCus->setID(id);
+	m_newCus->setName(name);
+	m_newCus->setPhone(phone);
+	m_newCus->setPassport(passport);
+	m_newCus->setTourCode(tourCode);
+	m_newCus->setPlaceCode(placeCode);
+	m_newCus->setTransportCode(transportCode);
+	this->m_customer.push(m_newCus);
 }
 
 void main()
