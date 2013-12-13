@@ -9,7 +9,7 @@
 class CCustomer // lớp khách hàng
 {
 protected:
-	int m_ID; 
+	UINT m_ID; 
 	ustring m_Name; // tên khách hàng
 	//Day BirthDay; // ngày tháng năm sinh thuộc lớp ngày
 	ustring m_Phone; // số điện thoại
@@ -21,8 +21,8 @@ public:
 	CCustomer();
 	 
 	// các hàm getter và setter
-	int getID();
-	void setID(int ID);
+	UINT getID();
+	void setID(UINT ID);
 
 	UINT getPlaceCode();
 	void setPlaceCode(UINT placecode);

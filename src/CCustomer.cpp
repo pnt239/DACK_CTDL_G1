@@ -13,12 +13,12 @@ CCustomer::CCustomer()
 	this->m_TourCode = -1;
 	this->m_TransportCode.Set(L"NULL");
 }
-int CCustomer::getID()
+UINT CCustomer::getID()
 {
 	return this->m_ID;
 }
 
-void CCustomer::setID(int ID)
+void CCustomer::setID(UINT ID)
 {
 	this->m_ID = ID;
 }
