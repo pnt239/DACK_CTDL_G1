@@ -2,7 +2,7 @@
 #include "Place.h"
 #include "List.h"
 #include <fstream>
-#include <ustring.h>
+#include "ustring.h"
 #include <time.h>
 #define MAX 100
 #define INF INT_MAX
@@ -13,6 +13,7 @@ private:
 	INT Save[MAX];
 	INT Label[MAX];
 	float Length[MAX];
+	CPlace* m_new;		//lưu địa điểm mới
 	CList<CPlace *> m_map;
 	UINT m_n;		//số đỉnh của đồ thị 
 	INT m_Place;
@@ -21,8 +22,10 @@ public:
 	CMap();
 	
 	~CMap();
+	void setNew(ustring s);
+	ustring getNew();
 	void AddMap(CPlace*);
-	bool Compare(ustring s);
+	bool Compare();
 	void creatArr();
 	bool readGraph(char* name);
 	void writeFile(char* name);
@@ -30,4 +33,5 @@ public:
 	float findPathMin();
 	void UpdatePath(INT u);
 	float finalPath(INT a, INT b);
+	void show();
 };
