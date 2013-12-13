@@ -10,7 +10,7 @@ CCustomer::CCustomer()
 	this->m_Name = "NULL";
 	this->m_Passport = "NULL";
 	this->m_Phone = "NULL";
-	this->m_TourCode = "NULL";
+	this->m_TourCode = -1;
 	this->m_TransportCode = "NULL";
 }
 int CCustomer::getID()
@@ -63,12 +63,12 @@ void CCustomer::setPassport(std::string Passport)
 	this->m_Passport = Passport;
 }
 
-std::string CCustomer::getTourCode()
+UINT CCustomer::getTourCode()
 {
 	return this->m_TourCode;
 }
 
-void CCustomer::setTourCode(std::string TourCode)
+void CCustomer::setTourCode(UINT TourCode)
 {
 	this->m_TourCode = TourCode;
 }

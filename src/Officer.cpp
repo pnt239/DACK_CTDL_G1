@@ -13,7 +13,7 @@ COfficer::COfficer()
 	this->m_Name = "NULL";
 	this->m_Passport = "NULL";
 	this->m_Phone = "NULL";
-	this->m_TourCode = "NULL";
+	this->m_TourCode = -1;
 	this->m_TransportCode = "NULL";
 }
 int COfficer::getID()
@@ -56,12 +56,12 @@ void COfficer::setPassport(std::string Passport)
 	this->m_Passport = Passport;
 }
 
-std::string COfficer::getTourCode()
+UINT COfficer::getTourCode()
 {
 	return this->m_TourCode;
 }
 
-void COfficer::setTourCode(std::string TourCode)
+void COfficer::setTourCode(UINT TourCode)
 {
 	this->m_TourCode = TourCode;
 }

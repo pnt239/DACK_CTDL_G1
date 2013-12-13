@@ -11,7 +11,7 @@ protected:
 	//Day BirthDay; // ngày tháng năm sinh thuộc lớp ngày
 	std::string m_Phone; // số điện thoại
 	std::string m_Passport; // hộ chiếu
-	std::string m_TourCode; // mã tour
+	UINT m_TourCode; // mã tour
 	std::string m_TransportCode; // mã số phương tiện
 public:
 	COfficer();
@@ -29,8 +29,8 @@ public:
 	std::string getPassport();
 	void setPassport(std::string Passport);
 
-	std::string getTourCode();
-	void setTourCode(std::string TourCode);
+	UINT getTourCode();
+	void setTourCode(UINT TourCode);
 
 	std::string getTransportCode();
 	void setTransportCode(std::string Transport);
