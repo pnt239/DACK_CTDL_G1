@@ -11,6 +11,7 @@ private:
 	ustring m_name;
 	INT m_x;
 	INT m_y;
+	UINT m_id;
 public:
 	CPlace();
 	~CPlace();
@@ -19,6 +20,7 @@ public:
 	ustring getName();
 	void setX(INT x);
 	void setY(INT y);
+	void setID(UINT id);
 	INT getX();
 	INT getY();
 };

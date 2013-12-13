@@ -22,11 +22,11 @@ public:
 	
 	~CMap();
 	void AddMap(CPlace*);
-	bool Compare(ustring s);
+	INT search(ustring s);
 	void creatArr();
 	bool readGraph(char* name);
 	void writeFile(char* name);
-	void addTop();
+	void addTop(ustring name);
 	float findPathMin();
 	void UpdatePath(INT u);
 	float finalPath(INT a, INT b);
