@@ -12,6 +12,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TravelManager.cpp" />
+    <ClCompile Include="TravelManagerFrame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TravelManager.h" />
+    <ClInclude Include="TravelManagerFrame.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{26D7AE12-CF7C-4268-B095-5E5A9435BD22}</ProjectGuid>
