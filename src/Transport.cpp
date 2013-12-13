@@ -26,7 +26,7 @@ void CTransport::Set_Vehicles(UINT vehicles)
 {
 	this->m_Vehicles = vehicles;
 }
-void CTransport::Set_NumPlate(string numplate)
+void CTransport::Set_NumPlate(ustring numplate)
 {
 	this->m_NumPlate = numplate;
 }
@@ -48,7 +48,7 @@ void CTransport::Set_LossGar(float lossgar)
 	this->m_LossGar = lossgar;
 }
 
-void CTransport::Set_Status(string sts)
+void CTransport::Set_Status(ustring sts)
 {
 	this->m_Status = sts;
 }
@@ -68,7 +68,7 @@ UINT CTransport::Get_Vehicles()
 	return this->m_Vehicles;
 }
 
-string CTransport::Get_NumPlate()
+ustring CTransport::Get_NumPlate()
 {
 	return this->m_NumPlate;
 }
@@ -89,7 +89,7 @@ float CTransport::Get_LossGar()
 	return this->m_LossGar;
 }
 
-string CTransport::Get_Status()
+ustring CTransport::Get_Status()
 {
 	return this->m_Status;
 }
@@ -130,7 +130,7 @@ bool CTransport::Move(float km)
 }
 void CTransport::ImportAll()
 {
-	string name;
+	ustring name;
 	cout << "\nNhap vao bien so xe: ";
 	do
 	{
