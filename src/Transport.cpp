@@ -5,8 +5,8 @@ CTransport::CTransport()
 	this->m_FuelTank = 5;
 	this->m_Gasoline = 5;
 	this->m_LossGar = 0.5;
-	this->m_NumPlate = "";
-	this->m_Status = "";
+	this->m_NumPlate.Set(L"");
+	this->m_Status.Set(L"");
 	this->m_Vehicles = 0;
 	this->m_Seat = 2;
 }
