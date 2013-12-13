@@ -145,3 +145,31 @@ void main()
 {
 	system("pause");
 }
+
+void CDuLich::removeCustomer(UINT ID)
+{
+	for(UINT i = 0;i < this->m_customer.size();i++)
+		if(this->m_customer[i]->getID() == ID)
+		{
+			this->m_customer.remove(i);
+			return;
+		}
+}
+void CDuLich::removeTour(UINT m_id)
+{
+	for(UINT i = 0; i < this->m_tour.size();i++)
+		if(this->m_tour[i]->getID() == m_id)
+		{
+			this->m_tour.remove(i);
+			return;
+		}
+}
+void CDuLich::removeTranspost(UINT ID)
+{
+	for(UINT i = 0; i < this->m_Transport.size();i++)
+		if(this->m_Transport[i]->getID() == ID)
+		{
+			this->m_Transport.remove(i);
+			return;
+		}
+}
