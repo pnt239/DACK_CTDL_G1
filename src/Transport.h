@@ -43,7 +43,5 @@ public:
 	UINT getID();
 
 	bool Compare_Numplate();
-	void ImportAll();
-	void ExportAll();
 	bool Move(float km);
 };
