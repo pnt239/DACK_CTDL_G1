@@ -40,5 +40,14 @@ public:
 	}
 	//< return -1 | == return 0 | > return 1
 	int compare(ustring _Ptr);
-
+	//friend std::fstream& operator<<(std::fstream& fs, const ustring &MyData)
+	//{
+	//	fs << MyData.str.c_str();
+	//	return fs;
+	//}
+	//friend std::fstream& operator>>(std::fstream& fs, const ustring &MyData)
+	//{
+	//	fs >> MyData;
+	//	return fs;
+	//}
 };
