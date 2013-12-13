@@ -262,10 +262,106 @@ TravelManagerFrame::TravelManagerFrame(const wxString& title)
 	
 	this->Centre( wxBOTH );
 
-	CDate test;
-	test.Import(L"22/03/1994");
+	// Connect Events
+	m_cbTour->Connect( wxEVT_COMMAND_COMBOBOX_SELECTED, wxCommandEventHandler( TravelManagerFrame::SelectCombo ), NULL, this );
+	m_btnCusAdd->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::AddCustomer ), NULL, this );
+	m_btnCusEdit->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::EditCustomer ), NULL, this );
+	m_btnCusRemove->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::RemoveCustomer ), NULL, this );
+	m_btnOfficerAdd->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::AddOfficer ), NULL, this );
+	m_btnOfficerEdit->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::EditOfficer ), NULL, this );
+	m_btnOfficerRemove->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::RemoveOfficer ), NULL, this );
+	m_btnTransAdd->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::AddTransport ), NULL, this );
+	m_btnTransEdit->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::EditTransport ), NULL, this );
+	m_btnTransRemove->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::RemoveTransport ), NULL, this );
+	m_btnPlaceAdd->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::AddPlace ), NULL, this );
+	m_btnPlaceEdit->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::EditPlace ), NULL, this );
+	m_btnPlaceRemove->Connect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::RemovePlace ), NULL, this );
 }
 
 TravelManagerFrame::~TravelManagerFrame()
 {
+	// Disconnect Events
+	m_cbTour->Disconnect( wxEVT_COMMAND_COMBOBOX_SELECTED, wxCommandEventHandler( TravelManagerFrame::SelectCombo ), NULL, this );
+	m_btnCusAdd->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::AddCustomer ), NULL, this );
+	m_btnCusEdit->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::EditCustomer ), NULL, this );
+	m_btnCusRemove->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::RemoveCustomer ), NULL, this );
+	m_btnOfficerAdd->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::AddOfficer ), NULL, this );
+	m_btnOfficerEdit->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::EditOfficer ), NULL, this );
+	m_btnOfficerRemove->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::RemoveOfficer ), NULL, this );
+	m_btnTransAdd->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::AddTransport ), NULL, this );
+	m_btnTransEdit->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::EditTransport ), NULL, this );
+	m_btnTransRemove->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::RemoveTransport ), NULL, this );
+	m_btnPlaceAdd->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::AddPlace ), NULL, this );
+	m_btnPlaceEdit->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::EditPlace ), NULL, this );
+	m_btnPlaceRemove->Disconnect( wxEVT_COMMAND_BUTTON_CLICKED, wxCommandEventHandler( TravelManagerFrame::RemovePlace ), NULL, this );
+}
+
+void TravelManagerFrame::SelectCombo( wxCommandEvent& event )
+{
+	//
+}
+
+void TravelManagerFrame::AddCustomer( wxCommandEvent& event )
+{
+	//wxMessageBox(wxT("Thanh"));
+	OptionDict optionDict;
+	optionDict.SetOption(wxT("button1"), wxT("Ok"));
+
+	if (!optionDict.HasOption(wxT("no-cancel"))) optionDict.SetOption(wxT("button2"), wxT("Cancel"));
+	new InputBox(NULL, optionDict, optionDict.HasOption(wxT("float")));
+}
+
+void TravelManagerFrame::EditCustomer( wxCommandEvent& event )
+{
+	//
+}
+
+void TravelManagerFrame::RemoveCustomer( wxCommandEvent& event )
+{
+	//
+}
+
+void TravelManagerFrame::AddOfficer( wxCommandEvent& event )
+{
+	//
+}
+
+void TravelManagerFrame::EditOfficer( wxCommandEvent& event )
+{
+	//
+}
+
+void TravelManagerFrame::RemoveOfficer( wxCommandEvent& event )
+{
+	//
+}
+
+void TravelManagerFrame::AddTransport( wxCommandEvent& event )
+{
+	//
+}
+
+void TravelManagerFrame::EditTransport( wxCommandEvent& event )
+{
+	//
+}
+
+void TravelManagerFrame::RemoveTransport( wxCommandEvent& event )
+{
+	//
+}
+
+void TravelManagerFrame::AddPlace( wxCommandEvent& event )
+{
+	//
+}
+
+void TravelManagerFrame::EditPlace( wxCommandEvent& event )
+{
+	//
+}
+
+void TravelManagerFrame::RemovePlace( wxCommandEvent& event )
+{
+	//
 }

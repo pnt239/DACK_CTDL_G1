@@ -5,6 +5,7 @@
 #include <wx/listctrl.h>
 #include <wx/srchctrl.h>
 #include <wx/richtext/richtextctrl.h>
+#include <InputBox.h>
 #include <Date.h>
 
 class TravelManagerFrame : public wxFrame
@@ -53,4 +54,19 @@ protected:
 	wxButton* m_btnPlaceEdit;
 	wxButton* m_btnPlaceRemove;
 	wxStatusBar* m_sttBar;
+
+	// Virtual event handlers, overide them in your derived class
+	virtual void SelectCombo( wxCommandEvent& event );
+	virtual void AddCustomer( wxCommandEvent& event );
+	virtual void EditCustomer( wxCommandEvent& event );
+	virtual void RemoveCustomer( wxCommandEvent& event );
+	virtual void AddOfficer( wxCommandEvent& event );
+	virtual void EditOfficer( wxCommandEvent& event );
+	virtual void RemoveOfficer( wxCommandEvent& event );
+	virtual void AddTransport( wxCommandEvent& event );
+	virtual void EditTransport( wxCommandEvent& event );
+	virtual void RemoveTransport( wxCommandEvent& event );
+	virtual void AddPlace( wxCommandEvent& event );
+	virtual void EditPlace( wxCommandEvent& event );
+	virtual void RemovePlace( wxCommandEvent& event );
 };
