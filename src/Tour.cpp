@@ -13,7 +13,7 @@ void CTour::setID(UINT id)
 {
 	this->m_id = id;
 }
-void CTour::setPlace(string place)
+void CTour::setPlace(ustring place)
 {
 	this->m_place.setName(place);
 }

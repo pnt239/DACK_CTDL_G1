@@ -7,6 +7,6 @@ class TransportManager
 private:
 	CList<CTransport> m_Transport;		//danh sach cac loai xe
 public:
-	void Set_Transport(Clist<CTransport> transport);
+	void Set_Transport(CList<CTransport> transport);
 	CList<CTransport> Get_Transport();
 };

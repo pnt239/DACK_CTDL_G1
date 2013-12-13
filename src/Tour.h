@@ -20,7 +20,7 @@ public:
 	~CTour();
 
 	void setID(UINT id);
-	void setPlace(string place);
+	void setPlace(ustring place);
 	void setTimeStart(CDate time);
 	void setTimeEnd(CDate time);
 

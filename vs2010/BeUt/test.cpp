@@ -1,8 +1,8 @@
 ﻿#pragma once
-//#include "Tour.h"
-//#include "Date.h"
-//#include "List.h"
-//#include "TransportManager.h"
+#include "Tour.h"
+#include "Date.h"
+#include "List.h"
+#include "TransportManager.h"
 #include <iostream>
 #include "CMap.h"
 #include "Place.h"

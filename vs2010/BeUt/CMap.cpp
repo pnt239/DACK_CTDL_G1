@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "CMap.h"
 
 using namespace std;
@@ -17,6 +17,7 @@ void CMap::AddMap(CPlace* s)
 	this->m_map.add(s);
 }
 
+//so sanh xem địa điểm vừa nhập vào có trong danh sách trước hay chưa
 bool CMap::Compare(ustring s)
 {
 	bool test = 0;
@@ -50,6 +51,8 @@ void CMap::creatArr()
 	}
 
 }
+
+//đọc file Map.txt
 bool CMap::readGraph(char* name)
 {
 	fstream f;
@@ -73,6 +76,7 @@ bool CMap::readGraph(char* name)
 	return true;
 }
 
+//viết kết quả ma trận lại file
 void CMap::writeFile(char* name)
 {
 	fstream f;
@@ -89,9 +93,10 @@ void CMap::writeFile(char* name)
 	f.close();
 }
 
+//thêm 1 đỉnh vào đồ thị
 void CMap::addTop()
 {
-	if(this->Compare(this->m_map[this->m_map.size()]->getName()))
+	if(this->Compare(this->m_map[this->m_map.size()]->getName()))		//nếu đỉnh đó đã có thì bỏ qua
 		return;
 	int m = this->m_n;
 	float tmp[100][100];
@@ -123,6 +128,7 @@ void CMap::addTop()
 	}
 }
 
+//tìm đường đi ngắn nhất trong ma trận
 float CMap::findPathMin()
 {
 	int li = -1;
@@ -137,6 +143,8 @@ float CMap::findPathMin()
 	}
 	return li;
 }
+
+//cập nhật đường đi
 void CMap::UpdatePath(int u)
 {
 	Label[u] = 1;
@@ -150,6 +158,7 @@ void CMap::UpdatePath(int u)
 			}
 	}
 }
+//tìm đường đi ngắn nhất
 float CMap::finalPath(int a, int b)
 {
 	char * name = "Map.txt";
