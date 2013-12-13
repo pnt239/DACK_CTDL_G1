@@ -4,6 +4,7 @@
 #include <Officer.h>
 #include <Transport.h>
 #include <ustring.h>
+#include <CMap.h>
 using namespace std;
 // File khong can cho chu C o dau
 
@@ -38,7 +39,7 @@ public:
 	void creatTour( ustring place, CDate m_timeStart, CDate m_timeEnd, ustring m_name);
 	void creatOfficer(UINT id, ustring name, ustring phone,ustring passport, UINT tourCode, ustring transportCode);
 	void creatCustomer(UINT id, ustring name, ustring phone, ustring passport, UINT tourCode, UINT placeCode, ustring transportCode);
-	void creatTransport();
+	void creatTransport(UINT id, UINT Vehicles, ustring NumPlate, UINT Seat,float Gasoline,float FuelTank,float LossGar,ustring Status,UINT Tourcode);
 };
 
 //tìm kiếm tour qua ID
@@ -121,17 +122,18 @@ CList<CTransport*> CDuLich::searchListTransport(UINT TourCode)
 	return this->m_Trans;
 }
 
+//tạo 1 tour mới
 void CDuLich::creatTour(ustring place,CDate m_timeStart, CDate m_timeEnd, ustring m_name)
 {
 	CTour* m_newTour = new CTour();
-	UINT placeCode;
-	/*
+	bool placeCode;
+	
 	// tìm kiếm địa điểm place này đã tồn tài chưa
-	if ((placeCode = CMap.search(place)) > -1)
+	if ((placeCode = CMap:Compare(place)) == 1)
 	{
 		// nếu mà không có thì add vào
 		CMap.add(place);
-	}*/
+	}
 	m_newTour->setPlace(place);
 	m_newTour->setTimeStart(m_timeStart);
 	m_newTour->setTimeEnd(m_timeEnd);
@@ -139,6 +141,7 @@ void CDuLich::creatTour(ustring place,CDate m_timeStart, CDate m_timeEnd, ustrin
 	this->m_tour.push(m_newTour);
 }
 
+//thêm nhân viên
 void CDuLich::creatOfficer(UINT id, ustring name, ustring phone,ustring passport, UINT tourCode, ustring transportCode)
 {
 	COfficer* m_newOff = new COfficer();
@@ -151,6 +154,7 @@ void CDuLich::creatOfficer(UINT id, ustring name, ustring phone,ustring passport
 	this->m_officer.push(m_newOff);
 }
 
+//thêm khách hàng
 void CDuLich::creatCustomer(UINT id, ustring name, ustring phone, ustring passport, UINT tourCode, UINT placeCode, ustring transportCode)
 {
 	CCustomer* m_newCus = new CCustomer();
@@ -162,6 +166,22 @@ void CDuLich::creatCustomer(UINT id, ustring name, ustring phone, ustring passpo
 	m_newCus->setPlaceCode(placeCode);
 	m_newCus->setTransportCode(transportCode);
 	this->m_customer.push(m_newCus);
+}
+
+//thêm phương tiện
+void CDuLich::creatTransport(UINT id, UINT Vehicles, ustring NumPlate, UINT Seat,float Gasoline,float FuelTank,float LossGar,ustring Status,UINT Tourcode)
+{
+	CTransport* m_newTrans = new CTransport();
+	m_newTrans->set_ID(id);
+	m_newTrans->Set_Vehicles(Vehicles);
+	m_newTrans->Set_NumPlate(NumPlate);
+	m_newTrans->Set_Seat(Seat);
+	m_newTrans->Set_Gasoline(Gasoline);
+	m_newTrans->Set_FuelTank(FuelTank);
+	m_newTrans->Set_LossGar(LossGar);
+	m_newTrans->Set_Status(Status);
+	m_newTrans->set_Tourcode(Tourcode);
+	this->m_Transport.push(m_newTrans);
 }
 
 void main()
