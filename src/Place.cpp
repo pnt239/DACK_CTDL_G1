@@ -31,6 +31,11 @@ void CPlace::setY(INT y)
 {
 	this->m_y = y;
 }
+
+void CPlace::setID(UINT id)
+{
+	this->m_id = id;
+}
 INT CPlace::getX()
 {
 	return this->m_x;
@@ -38,6 +43,11 @@ INT CPlace::getX()
 INT CPlace::getY()
 {
 	return this->m_y;
+}
+
+UINT CPlace::getID()
+{
+	return this->m_id;
 }
 //
 //void Place::ReadFile(string fileName)

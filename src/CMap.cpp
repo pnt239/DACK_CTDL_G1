@@ -18,21 +18,12 @@ void CMap::AddMap(CPlace* s)
 }
 
 //so sanh xem địa điểm vừa nhập vào có trong danh sách trước hay chưa
-bool CMap::Compare(ustring s)
+INT CMap::search(ustring s)
 {
-	bool test = 0;
 	for(INT i = 0; i < this->m_map.size() - 1; i++)
-	{
 		if(s.compare(this->m_map[i]->getName()) == 0)
-		{
-			test = 1;
-			break;
-		}
-	}
-	if(test == 0)
-		return 0;
-	else
-		return 1;
+			return this->m_map[i]->getID();
+	return -1;
 }
 
 void CMap::creatArr()
@@ -94,10 +85,15 @@ void CMap::writeFile(char* name)
 }
 
 //thêm 1 đỉnh vào đồ thị
-void CMap::addTop()
+void CMap::addTop(ustring name)
 {
-	if(this->Compare(this->m_map[this->m_map.size()]->getName()))		//nếu đỉnh đó đã có thì bỏ qua
+	if(this->search(name) == -1)		//nếu đỉnh đó đã có thì bỏ qua
 		return;
+	CPlace *place = new CPlace(name);
+	place->setID(m_n);
+
+	m_map.add(place);
+
 	INT m = this->m_n;
 	float tmp[100][100];
 	for(INT i = 0; i < m; i++)
@@ -163,7 +159,7 @@ float CMap::finalPath(INT a, INT b)
 {
 	char * name = "Map.txt";
 	this->readGraph(name);
-	this->addTop();
+	//this->addTop();
 	INT i;
 	for(INT i = 0; i < this->m_n; i++)
 	{

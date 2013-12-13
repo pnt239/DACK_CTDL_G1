@@ -17,6 +17,13 @@ CDate::~CDate()
 
 }
 
+CDate::CDate(INT d, INT m, INT y)
+{
+	this->m_day = d;
+	this->m_month = m;
+	this->m_year = y;
+}
+
 void CDate::Import(ustring a)
 {
 	do

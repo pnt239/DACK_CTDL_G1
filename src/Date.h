@@ -10,6 +10,7 @@ class CDate
 	BOOL CheckYear(INT year);
 public:
 	CDate();
+	CDate(INT d, INT m, INT y);
 	~CDate();
 	void Import(ustring a);
 	INT getDay();

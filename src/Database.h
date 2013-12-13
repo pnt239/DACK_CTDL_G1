@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <DuLich.h>
 
 class CDatabase
 {
@@ -19,7 +20,11 @@ public:
 
 	void save();
 	void readAll();
+
+	CDuLich &getTravel();
 private:
+	LPSTR readStr(ifstream &hFile);
+
 	std::string m_fileCustomer;
 	std::string m_fileOfficer;
 	std::string m_fileTransport;
@@ -28,5 +33,7 @@ private:
 	bool m_OffcSaved;
 	bool m_TranSaved;
 	bool m_TourSaved;
+
+	CDuLich m_travel;
 };
 

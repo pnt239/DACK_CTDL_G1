@@ -261,6 +261,9 @@ TravelManagerFrame::TravelManagerFrame(const wxString& title)
 	m_sttBar = this->CreateStatusBar( 1, wxST_SIZEGRIP, wxID_ANY );
 	
 	this->Centre( wxBOTH );
+
+	CDate test;
+	test.Import(L"22/03/1994");
 }
 
 TravelManagerFrame::~TravelManagerFrame()

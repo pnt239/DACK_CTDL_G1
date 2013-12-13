@@ -5,6 +5,7 @@
 #include <wx/listctrl.h>
 #include <wx/srchctrl.h>
 #include <wx/richtext/richtextctrl.h>
+#include <Date.h>
 
 class TravelManagerFrame : public wxFrame
 {
