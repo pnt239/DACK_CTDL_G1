@@ -6,8 +6,8 @@ class CCar:public CTransport
 private:
 	int m_CostCar; // chi phí xe hơi
 public:
-	//CCar();
-	//~CCar();
+	CCar();
+	~CCar();
 	void setCostCar(int costCar);
 	int getCostCar();
 	void SetCar(); // cụ thể hoá các thuộc tính của xe hơi

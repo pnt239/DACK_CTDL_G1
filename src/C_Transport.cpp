@@ -2,16 +2,16 @@
 
 
 // Viết các hàm trong lớp car
-//CCar::CCar()
-//{
-//	this->m_CostCar = 0;
-//	CTransport::CTransport();
-//}
-//
-//CCar::~CCar()
-//{
-//	CTransport::~CTransport();
-//}
+CCar::CCar()
+{
+	this->m_CostCar = 0;
+	CTransport();
+}
+
+CCar::~CCar()
+{
+
+}
 
 void CCar::setCostCar(int costCar)
 {
@@ -25,9 +25,9 @@ int CCar::getCostCar()
 
 void CCar::SetCar()
 {
-	this->setCostCar(500000); // chi phí là 500 000 vnd
-	this->Set_Seat(50); // xe loại 50 chỗ ngồi
-	this->Set_LossGar(0.5); // độ hao xăng là 0.5 l/km
+	this->m_CostCar = 500000; // chi phí là 500 000 vnd
+	this->m_Seat = 50; // xe loại 50 chỗ ngồi
+	this->m_LossGar = 0.5; // độ hao xăng là 0.5 l/km
 }
 
 ////////////////////////////////////////////////////////////////////////////
