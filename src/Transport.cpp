@@ -53,6 +53,11 @@ void CTransport::Set_Status(string sts)
 	this->m_Status = sts;
 }
 
+void CTransport::set_Tourcode(UINT tourcode)
+{
+	this->m_Tourcode = tourcode;
+}
+
 int CTransport::Get_Vehicles()
 {
 	return this->m_Vehicles;
@@ -82,6 +87,11 @@ float CTransport::Get_LossGar()
 string CTransport::Get_Status()
 {
 	return this->m_Status;
+}
+
+UINT CTransport::get_Tourcode()
+{
+	return this->m_Tourcode;
 }
 
 bool CTransport::Compare_Numplate()
