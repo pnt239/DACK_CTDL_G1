@@ -16,6 +16,8 @@ private:
 	CList<CTransport*> m_Transport;
 
 	CList<COfficer*> m_off;
+	CList<CCustomer*> m_cus;
+	CList<CTransport*> m_Trans;
 public:
 	CTour *searchTour(UINT m_id);
 	CTour *searchTour(ustring Place);
@@ -26,8 +28,12 @@ public:
 
 	COfficer* searchOfficer(UINT ID);
 	COfficer* searchOfficer(ustring name);
+
 	CCustomer* searchCustomer(UINT ID);
 	CCustomer* searchCustomer(ustring name);
+
+	CTransport* searchTransport(UINT TourCode);
+	CTransport* searchTransport(ustring name);
 
 	void creatTour( ustring place, CDate m_timeStart, CDate m_timeEnd, ustring m_name);
 };
@@ -62,18 +68,38 @@ CCustomer *CDuLich::searchCustomer(UINT m_id)
 CCustomer *CDuLich::searchCustomer(ustring name)
 {
 	for(int i = 0;i < this->m_customer.size();i++)
-		if(this->m_customer[i]->getName() == name)
+		if(this->m_customer[i]->getName().compare(name))
 			return this->m_customer[i];
 	return NULL;
 }
 
-//tìm kiếm nhân viên qua ID
+//tìm phương tiện qua id
+
+//tìm kiếm danh sách nhân viên qua ID
 CList<COfficer*> CDuLich::searchListOfficer(UINT TourCode)
 {
 	for(int i = 0;i < this->m_officer.size();i++)
 		if(this->m_officer[i]->getTourCode() == TourCode)
 			this->m_off.push(this->m_officer[i]);
 	return this->m_off;
+}
+
+//search danh sách CCustomer
+CList<CCustomer*>  CDuLich::searchListCustomer(UINT TourCode)
+{
+	for(int i = 0;i < this->m_customer.size();i++)
+		if(this->m_customer[i]->getTourCode() == TourCode)
+			this->m_cus.push(this->m_customer[i]);
+	return this->m_cus;
+}
+
+//tìm kiếm sanh sách phương tiện qua id
+CList<CTransport*> CDuLich::searchListTransport(UINT TourCode)
+{
+	for(int i = 0;i < this->m_Transport.size();i++)
+		if(this->m_Transport[i]->get_Tourcode() == TourCode)
+			this->m_Trans.push(this->m_Transport[i]);
+	return this->m_Trans;
 }
 
 void CDuLich::creatTour(ustring place,CDate m_timeStart, CDate m_timeEnd, ustring m_name)
