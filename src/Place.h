@@ -1,20 +1,22 @@
 #pragma once
 #include <windows.h>
-#include <string>
+#include <ustring.h>
+
+
 
 // A point of graph
 class CPlace
 {
 private:
-	std::string m_name;
+	ustring m_name;
 	INT m_x;
 	INT m_y;
 public:
 	CPlace();
 	~CPlace();
-
-	void setName(std::string name);
-	std::string getName();
+	CPlace(ustring s);
+	void setName(ustring name);
+	ustring getName();
 	void setX(INT x);
 	void setY(INT y);
 	INT getX();

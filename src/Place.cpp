@@ -3,12 +3,17 @@
 
 CPlace::CPlace()
 {
-	this->m_name = "";
 }
 CPlace::~CPlace()
 {
 	this->m_name.clear();
 }
+
+CPlace::CPlace(ustring s)
+{
+	this->m_name = s;
+}
+
 void CPlace::setName(ustring name)
 {
 	this->m_name = name;

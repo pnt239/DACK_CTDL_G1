@@ -1,12 +1,21 @@
 ﻿#pragma once
-#include "Tour.h"
-#include "Date.h"
-#include "List.h"
-#include "TransportManager.h"
+//#include "Tour.h"
+//#include "Date.h"
+//#include "List.h"
+//#include "TransportManager.h"
+#include <iostream>
+#include "CMap.h"
+#include "Place.h"
+using namespace std;
 
 void main()
 {
-	// only for test
+	CPlace *s = new CPlace(L"Khánh Hòa");
+	CMap a;
+	a.AddMap(s);
+	float z =  a.finalPath(0, 3);
+	cout << z;
+	// only for test;
 	/*Ctour a;
 	UINT id = 1;
 	a.Set_ID(id);
