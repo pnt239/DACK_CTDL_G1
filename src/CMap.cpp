@@ -44,6 +44,7 @@ void CMap::creatArr()
 }
 
 //đọc file Map.txt
+//đọc file Map.txt
 bool CMap::readGraph(char* name)
 {
 	fstream f;
@@ -57,6 +58,22 @@ bool CMap::readGraph(char* name)
 	{
 		f >> this->m_n;
 		this->creatArr();
+		for(INT i = 0; i < this->m_n; i++)
+		{
+				CPlace *tmp = new CPlace();
+				INT id, x, y;
+				string a;
+				f >> id;
+				f >> a;
+				f >> x >> y;
+				tmp->setID(id);
+				tmp->setX(x);
+				tmp->setY(y);
+				ustring b;
+				b.ConvertUTF8ToUTF16(a.c_str());
+				tmp->setName(b);
+				this->m_map.add(tmp);
+		}
 		for(INT i = 0; i < m_n; i++)
 			for(INT j = 0; j < m_n; j++)
 			{
