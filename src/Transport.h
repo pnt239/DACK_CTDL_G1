@@ -9,9 +9,10 @@ static vector<string> ListNumplate;
 class CTransport
 {
 protected:
-	int m_Vehicles;		//loại xe nào? 
+	UINT id;
+	UINT m_Vehicles;		//loại xe nào? 
 	string m_NumPlate;		//biển số xe;
-	int m_Seat;				//số chỗ ngồi
+	UINT m_Seat;				//số chỗ ngồi
 
 	float m_Gasoline;		//lượng xăng
 	float m_FuelTank;		//dung tích bình xăng
@@ -21,23 +22,25 @@ protected:
 public:
 	CTransport();
 	~CTransport();
-	void Set_Vehicles(int vehicles);
+	void Set_Vehicles(UINT vehicles);
 	void Set_NumPlate(string numplate);
-	void Set_Seat(int num);
+	void Set_Seat(UINT num);
 	void Set_Gasoline(float gasoline);
 	void Set_FuelTank(float fuel);
 	void Set_LossGar(float lossgar);
 	void Set_Status(string sts);
 	void set_Tourcode(UINT tourID);
+	void set_ID(UINT id);
 
-	int Get_Vehicles();
+	UINT Get_Vehicles();
 	string Get_NumPlate();
-	int Get_Seat();
+	UINT Get_Seat();
 	float Get_Gasoline();
 	float Get_FuelTank();
 	float Get_LossGar();
 	string Get_Status();
 	UINT get_Tourcode();
+	UINT getID();
 
 	bool Compare_Numplate();
 	void ImportAll();

@@ -22,7 +22,7 @@ CTransport::~CTransport()
 	this->m_Seat = 0;
 }
 
-void CTransport::Set_Vehicles(int vehicles)
+void CTransport::Set_Vehicles(UINT vehicles)
 {
 	this->m_Vehicles = vehicles;
 }
@@ -30,7 +30,7 @@ void CTransport::Set_NumPlate(string numplate)
 {
 	this->m_NumPlate = numplate;
 }
-void CTransport::Set_Seat(int num)
+void CTransport::Set_Seat(UINT num)
 {
 	this->m_Seat = num;
 }
@@ -58,7 +58,12 @@ void CTransport::set_Tourcode(UINT tourcode)
 	this->m_Tourcode = tourcode;
 }
 
-int CTransport::Get_Vehicles()
+void CTransport::set_ID(UINT id)
+{
+	this->id = id;
+}
+
+UINT CTransport::Get_Vehicles()
 {
 	return this->m_Vehicles;
 }
@@ -67,7 +72,7 @@ string CTransport::Get_NumPlate()
 {
 	return this->m_NumPlate;
 }
-int CTransport::Get_Seat()
+UINT CTransport::Get_Seat()
 {
 	return this->m_Seat;
 }
@@ -94,10 +99,15 @@ UINT CTransport::get_Tourcode()
 	return this->m_Tourcode;
 }
 
+UINT CTransport::getID()
+{
+	return this->id;
+}
+
 bool CTransport::Compare_Numplate()
 {
 	bool test = true;
-	for(int i = 0; i < ListNumplate.size(); i++)
+	for(UINT i = 0; i < ListNumplate.size(); i++)
 	{
 		if(this->m_NumPlate.compare(ListNumplate[i]) == 0)
 		{
@@ -129,11 +139,11 @@ void CTransport::ImportAll()
 		if(this->Compare_Numplate() == false)
 			cout << "\nBien so trung. Moi ban nhap lai: ";
 	}while(this->Compare_Numplate() == false);
-	int x;
+	UINT x;
 	cout << "\nMoi ban nhap vao loai xe. (Nhap dung: 1, xe may; 2 - xe o to; 3 - xe bus; 4- may bay): ";
 	cin >> x;
 	this->Set_Vehicles(x);
-	int n;
+	UINT n;
 	cout << "\nXe co bao nhieu cho ngoi?: ";
 	cin >> n;
 	this->Set_Seat(n);
