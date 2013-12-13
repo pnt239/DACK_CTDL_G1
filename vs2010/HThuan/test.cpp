@@ -4,9 +4,9 @@ using namespace std;
 
 int main()
 {
-	ustring s1 = L"b";
-	ustring s2 = L"a";
+	wstring s1 = L"b";
+	wstring s2 = L"a";
 	string a;
-	cout << s1.compare(s2);
+	if(s1==s2) cout << "a";
 	return 0;
 }

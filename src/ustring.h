@@ -5,7 +5,9 @@
 #include <atlstr.h>
 #include <strsafe.h>
 #include <windows.h>
-
+#pragma once
+#ifndef _ustring_
+#define _ustring_
 class ustring
 {
 private:
@@ -39,4 +41,6 @@ public:
 	}
 	//< return -1 | == return 0 | > return 1
 	int compare(ustring _Ptr);
+
 };
+#endif
