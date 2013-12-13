@@ -2,16 +2,16 @@
 
 
 // Viết các hàm trong lớp car
-CCar::CCar()
-{
-	this->m_CostCar = 0;
-	CTransport::CTransport();
-}
-
-CCar::~CCar()
-{
-	CTransport::~CTransport();
-}
+//CCar::CCar()
+//{
+//	this->m_CostCar = 0;
+//	CTransport::CTransport();
+//}
+//
+//CCar::~CCar()
+//{
+//	CTransport::~CTransport();
+//}
 
 void CCar::setCostCar(int costCar)
 {
@@ -33,16 +33,16 @@ void CCar::SetCar()
 ////////////////////////////////////////////////////////////////////////////
 
 // viết các hàm trong lớp Train
-CTrain::CTrain()
-{
-	this->m_CostTrain = 0;
-	CTransport::CTransport();
-}
-
-CTrain::~CTrain()
-{
-	CTransport::~CTransport();
-}
+//CTrain::CTrain()
+//{
+//	this->m_CostTrain = 0;
+//	CTransport::CTransport();
+//}
+//
+//CTrain::~CTrain()
+//{
+//	CTransport::~CTransport();
+//}
 
 void CTrain::setCostTrain(int costTrain)
 {
@@ -65,16 +65,16 @@ void CTrain::SetTrain()
 
 // viết các hàm trong lớp Plane
 
-CPlane::CPlane()
-{
-	this->m_CostPlane = 0;
-	CTransport::CTransport();
-}
-
-CPlane::~CPlane()
-{
-	CTransport::~CTransport();
-}
+//CPlane::CPlane()
+//{
+//	this->m_CostPlane = 0;
+//	CTransport::CTransport();
+//}
+//
+//CPlane::~CPlane()
+//{
+//	CTransport::~CTransport();
+//}
 
 void CPlane::setCostPlane(int costPlane)
 {
