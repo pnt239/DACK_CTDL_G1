@@ -11,7 +11,19 @@ CMap::CMap()
 
 CMap::~CMap()
 {
+
 }
+
+void CMap::setNew(ustring s)
+{
+	this->m_new = new CPlace(s);
+}
+
+ustring CMap::getNew()
+{
+	return this->m_new->getName();
+}
+
 
 void CMap::AddMap(CPlace* s)
 {
@@ -19,17 +31,18 @@ void CMap::AddMap(CPlace* s)
 }
 
 //so sanh xem địa điểm vừa nhập vào có trong danh sách trước hay chưa
-bool CMap::Compare(ustring s)
+bool CMap::Compare()
 {
 	bool test = 0;
-	for(INT i = 0; i < this->m_map.size() - 1; i++)
+	for(INT i = 0; i < this->m_map.size(); i++)
 	{
-		if(s.compare(this->m_map[i]->getName()) == 0)
+		if(this->getNew().compare(this->m_map[i]->getName()) == 0)
 		{
 			test = 1;
 			break;
 		}
 	}
+	this->AddMap(this->m_new);
 	if(test == 0)
 		return 0;
 	else
@@ -63,14 +76,6 @@ bool CMap::readGraph(char* name)
 	{
 		f >> this->m_n;
 		this->creatArr();
-		//for(INT i = 0; i < this->m_n; i++)
-		//{
-		//	for(INT j = 0; j < this->m_n; j++)
-		//	{
-		//		this->m_Arr[i][j] = 0;
-		//	}
-		//}
-
 		for(INT i = 0; i < m_n; i++)
 			for(INT j = 0; j < m_n; j++)
 			{
@@ -103,7 +108,7 @@ void CMap::writeFile(char* name)
 //thêm 1 đỉnh vào đồ thị
 void CMap::addTop()
 {
-	if(this->Compare(this->m_map[this->m_map.size()]->getName()))		//nếu đỉnh đó đã có thì bỏ qua
+	if(this->Compare())		//nếu đỉnh đó đã có thì bỏ qua
 		return;
 	INT m = this->m_n;
 	float tmp[100][100];
@@ -200,4 +205,14 @@ float CMap::finalPath(INT a, INT b)
 	}
 	this->writeFile(name);
 	return Length[b];
+}
+
+void CMap::show()
+{
+	for(int i = 0; i < this->m_n; i++)
+	{
+		for(int j = 0; j < this->m_n; j++)
+			cout << this->m_Arr[i][j] << " ";
+		cout << endl;
+	}
 }
