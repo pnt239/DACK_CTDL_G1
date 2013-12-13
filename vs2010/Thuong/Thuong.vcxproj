@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\CCustomer.cpp" />
+    <ClCompile Include="..\..\src\CMap.cpp" />
     <ClCompile Include="..\..\src\Customer.cpp" />
     <ClCompile Include="..\..\src\C_Transport.cpp" />
     <ClCompile Include="..\..\src\Date.cpp" />
@@ -24,6 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\CCustomer.h" />
+    <ClInclude Include="..\..\src\CMap.h" />
     <ClInclude Include="..\..\src\CTransport.h" />
     <ClInclude Include="..\..\src\C_Transport.h" />
     <ClInclude Include="..\..\src\Date.h" />
@@ -35,6 +37,7 @@
     <ClInclude Include="..\..\src\Tour.h" />
     <ClInclude Include="..\..\src\Transport.h" />
     <ClInclude Include="..\..\src\ustring.h" />
+    <ClInclude Include="CDuLich.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{18AD38B5-ABAE-4081-9E40-9E48162D95DA}</ProjectGuid>
