@@ -37,6 +37,7 @@ public:
 	CCustomer* searchCustomer(ustring name);
 	void removeCustomer(UINT ID);
 
+
 	CTransport* searchTransport(UINT ID);
 	CTransport* searchTransport(ustring NumPlate);
 	void removeTranspost(UINT ID);

@@ -49,6 +49,23 @@ public:
 	void AssignTourCode(CCustomer);
 //	void AssignTransportCode(CCustomer);
 	void AssignPlaceCode(CCustomer);
+
+	void editName(ustring name)
+	{this->m_Name = name;}
+	void editPhone(ustring phone)
+	{this->m_Phone = phone;}
+	void editPassport(ustring passport)
+	{this->m_Passport = passport;}
+	void editTourCode(UINT tourcode)
+	{this->m_TourCode = tourcode;}
+	void editPlaceCode(UINT placecode)
+	{this->m_PlaceCode = placecode;}
+	void edit(ustring name,ustring phone,ustring passport,UINT tourcode,UINT placecode)
+	{this->m_Name = name;
+	 this->m_Phone = phone;
+	 this->m_Passport = passport;
+	 this->m_TourCode = tourcode;
+	 this->m_PlaceCode = placecode;}
 };
 
 
