@@ -1,5 +1,4 @@
 ﻿#pragma once
-#include <iostream>
 #include "CMap.h"
 
 using namespace std;
@@ -41,12 +40,16 @@ void CMap::creatArr()
 	this->m_Arr = new float *[this->m_n];
 	for(INT i = 0; i < this->m_n; i++)
 	{
-		this->m_Arr[i] = new float[m_n];
+		this->m_Arr[m_n] = new float[m_n];
+	}
+	for(INT i = 0; i < this->m_n; i++)
+	{
 		for(INT j = 0; j < this->m_n; j++)
 		{
-			this->m_Arr[i][j] = 0;	//no break o day lun	
+			this->m_Arr[i][j] = 0;
 		}
 	}
+
 }
 
 //đọc file Map.txt
@@ -63,20 +66,10 @@ bool CMap::readGraph(char* name)
 	{
 		f >> this->m_n;
 		this->creatArr();
-		//for(INT i = 0; i < this->m_n; i++)
-		//{
-		//	for(INT j = 0; j < this->m_n; j++)
-		//	{
-		//		this->m_Arr[i][j] = 0;
-		//	}
-		//}
-
 		for(INT i = 0; i < m_n; i++)
 			for(INT j = 0; j < m_n; j++)
 			{
-				float t;
-				f >> t;
-				this->m_Arr[i][j] = t;
+				f >> this->m_Arr[i][j];
 			}
 	}
 	f.close();
@@ -114,7 +107,6 @@ void CMap::addTop()
 			tmp[i][j] = this->m_Arr[i][j];
 		}
 	}
-
 	this->m_n += 1;
 	this->creatArr();
 
@@ -125,21 +117,14 @@ void CMap::addTop()
 			this->m_Arr[i][j] = tmp[i][j];
 		}
 	}
-
 	INT t;
 	srand(time(NULL));
 	t = rand()%m;
 	for(INT i = 0; i < t; i++)
 	{
 		t = rand()%m;
-		this->m_Arr[t][this->m_n - 1] = this->m_Arr[this->m_n - 1][t] = rand() % 1001 + 100;
-	}
-
-	for(int i = 0; i < this->m_n; i++)
-	{
-		for(int j = 0; j < this->m_n; j++)
-			cout << this->m_Arr[i][j] << " ";
-		cout << endl;
+		if(this->m_Arr[t][this->m_n - 1] != 0)
+			this->m_Arr[t][this->m_n - 1] = this->m_Arr[this->m_n - 1][t] = rand() % 1001;
 	}
 }
 
@@ -178,7 +163,6 @@ float CMap::finalPath(INT a, INT b)
 {
 	char * name = "Map.txt";
 	this->readGraph(name);
-	//this->show();
 	this->addTop();
 	INT i;
 	for(INT i = 0; i < this->m_n; i++)
@@ -199,5 +183,5 @@ float CMap::finalPath(INT a, INT b)
 		UpdatePath(u);
 	}
 	this->writeFile(name);
-	return Length[b];
+	return true;
 }

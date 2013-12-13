@@ -104,20 +104,6 @@ UINT CTransport::getID()
 	return this->id;
 }
 
-bool CTransport::Compare_Numplate()
-{
-	bool test = true;
-	for(UINT i = 0; i < ListNumplate.size(); i++)
-	{
-		if(this->m_NumPlate.compare(ListNumplate[i]) == 0)
-		{
-			test = 0;
-			break;
-		}
-	}
-	return test;
-}
-
 bool CTransport::Move(float km)
 {
 	float tmp;
